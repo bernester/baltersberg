@@ -1,6 +1,8 @@
 <script>
-  import "@fontsource/inter";
-  import "../global.scss";
+  import "@fontsource/inter/400.css";
+  import "@fontsource/inter/700.css";
+  import "../styles/app.scss";
+  import Logo from "../components/Logo.svelte";
 </script>
 
 <svelte:head>
@@ -9,31 +11,29 @@
 <div class="layout">
   <header class="header">
     <a href="/" aria-label="Zur Startseite">
-      <img src="baltersberg-logo.svg" alt="" class="logo" aria-hidden="true" />
+      <Logo />
     </a>
   </header>
   <main class="main">
     <slot />
   </main>
   <footer class="footer">
-    <div class="wrapper">
-      <p>
-        Das Zeltlager Baltersberg ist unter der Trägerschaft des
-        <a
-          href="https://allgaeu-oberschwaben.bdkj.info/"
-          target="_blank"
-          rel="nofollow"
-        >
-          Katholischen Jugendreferat Ravensburg
-        </a>. <br />
-        <a href="/datenschutz">Datenschutzerklärung</a>
-        &copy; 2017-2023 Zeltlager Baltersberg
-      </p>
-    </div>
+    <p>
+      Das Zeltlager Baltersberg ist unter der Trägerschaft des
+      <a
+        href="https://allgaeu-oberschwaben.bdkj.info/"
+        target="_blank"
+        rel="nofollow"
+      >
+        Katholischen Jugendreferat Ravensburg
+      </a><br />
+      <a href="/datenschutz">Datenschutzerklärung</a>
+      &copy; 2017-2023 Zeltlager Baltersberg
+    </p>
   </footer>
 </div>
 
-<style>
+<style type="scss">
   .logo {
     height: 64px;
   }
@@ -49,14 +49,14 @@
     justify-content: flex-end;
     padding: 32px;
     flex: 0;
+    position: sticky;
+    top: 0;
   }
 
   .main {
-    padding: 32px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex: 1;
   }
 
   .footer {
@@ -64,7 +64,10 @@
     align-items: center;
     justify-content: center;
     flex: 0;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 32px;
+    background-color: var(--backgroundSecondary);
   }
 
   .wrapper {

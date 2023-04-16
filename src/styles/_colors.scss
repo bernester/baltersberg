@@ -1,0 +1,14 @@
+:root {
+  --text: #252a57;
+  --link: #4e34ff;
+  --linkHover: #4e34ff;
+  --linkContrast: #ffffff;
+  --highlight: #f83331;
+  --regular: 400;
+  --bold: 700;
+  --backgroundSecondary: #f3f5f7;
+}
+
+.bg-secondary {
+  background-color: var(--backgroundSecondary);
+}

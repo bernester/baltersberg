@@ -1,0 +1,29 @@
+@use "colors";
+@use "typo";
+@use "btn";
+@use "layout";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  // text-underline-position: under;
+  // text-decoration-thickness: 8;
+}
+
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+}
