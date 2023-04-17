@@ -1,5 +1,5 @@
 <section class="section text-center mt-20 mb-8 prices">
-  <div style="max-width: 640px">
+  <div class="section-content ph-8">
     <h2 class="bakso h4 mb-4">Der passende Beitrag für alle.</h2>
     <p class="copy mb-8">
       Damit sich auch Alle die <b>Freizeit für Alle</b> leisten können, bieten wir
@@ -30,8 +30,8 @@
     >Jetzt anmelden</a
   >
 </section>
-<section class="section section-full bg-secondary p-8 mv-8">
-  <div class="section-content">
+<section class="section section-full bg-secondary mv-8">
+  <div class="section-content p-8">
     <p class="small">
       <b>Zur Orientierung:</b>
       Ein normales Einkommen entspricht einem monatlichen Gesamt-Brutto-Einkommen
@@ -68,7 +68,8 @@
     display: flex;
     flex-direction: column-reverse;
     background-color: #fcf388;
-    animation: bubble 4s linear infinite;
+    border-radius: 43% 57% 65% 35% / 46% 51% 49% 54%;
+    animation: bubble 8s linear infinite;
   }
 
   .price-name {
