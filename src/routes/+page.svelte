@@ -44,12 +44,13 @@
   <div class="section-content ph-8">
     <h2 class="bakso h4 mb-8">Was ist das Zeltlager Baltersberg?</h2>
     <p class="copy-big">
-      Das Zeltlager Baltersberg ist ein inklusives Zeltlager für alle Kinder und
-      Jugendlichen zwischen 10 und 16 Jahren! Bei uns ist jeder herzlich
-      willkommen, unabhängig von Fähigkeiten, Geschlecht oder Hintergrund. Wir
-      bieten ein abenteuerliches Programm voller Spaß und Freude. In unseren
-      Zelten haben alle Platz. Sei dabei und erlebe eine unvergessliche Zeit mit
-      neuen Freunden und vielen tollen Erlebnissen!
+      Das Zeltlager Baltersberg ist ein inklusives Zeltlager für Kinder und
+      Jugendliche zwischen 10 und 16 Jahren! Bei uns sind alle herzlich
+      willkommen, unabhängig von Fähigkeiten, Geschlecht, Religion oder
+      Hintergrund. Wir bieten ein abenteuerliches Programm voller Spaß und
+      Freude. In unseren Zelten haben alle Platz. Sei dabei und erlebe eine
+      unvergessliche Zeit mit neuen Bekanntschaften und vielen tollen
+      Erlebnissen!
     </p>
   </div>
 </section>
