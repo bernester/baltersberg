@@ -7,10 +7,15 @@
     <span class="h4">Zeltlager Baltersberg</span><br />
     <span class="h1 highlight">Freizeit für Alle!</span>
   </h1>
-  <p class="bakso h2 mb-8">15.08.23 bis 23.08.23</p>
-  <a href="https://tally.so/r/3EKKMN" class="btn" rel="nofollow" target="blank"
-    >Jetzt anmelden</a
-  >
+  <p class="bakso h2 mb-8">13.08.24 bis 21.08.24</p>
+  <p class="bakso h6 mb-8">Aktuell noch keine Anmeldung</p>
+  <!-- <a
+    href="https://tally.so/r/3EKKMN"
+    class="btn"
+    rel="nofollow"
+    target="blank"
+    aria-disabled="true">Jetzt anmelden</a
+  > -->
 </section>
 
 <Prices />
@@ -22,8 +27,8 @@
       <p class="copy-small">
         <b>Dauer:</b>
         9 Tage <br />
-        Anreise: 15.08.23 ab 11 Uhr <br />
-        Abreise: 23.08.23 ab 11 Uhr
+        Anreise: 13.08.24 ab 11 Uhr <br />
+        Abreise: 21.08.24 ab 11 Uhr
       </p>
     </div>
     <div class="col">

@@ -26,9 +26,9 @@
       </div>
     </div>
   </div>
-  <a href="https://tally.so/r/3EKKMN" class="btn" rel="nofollow" target="blank"
+  <!-- <a href="https://tally.so/r/3EKKMN" class="btn" rel="nofollow" target="blank"
     >Jetzt anmelden</a
-  >
+  > -->
 </section>
 <section class="section section-full bg-secondary mv-8">
   <div class="section-content p-8">
