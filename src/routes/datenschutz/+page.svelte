@@ -1,5 +1,5 @@
 <div class="content">
-  <h1 class="h4 bakso">Datenschutz&shy;erklärung</h1>
+  <h1 class="h4">Datenschutz&shy;erklärung</h1>
   <p>
     Wir freuen uns sehr über Ihr Interesse an unserem Zeltlager. Datenschutz hat
     für uns einen besonders hohen Stellenwert und wir nehmen den Schutz Ihrer
@@ -34,7 +34,7 @@
 
   <p>bernesterland@gmail.com</p>
 
-  <h2 class="h5 bakso">Ihre Betroffenenrechte</h2>
+  <h2 class="h5">Ihre Betroffenenrechte</h2>
   <p>
     Unter den angegebenen Kontaktdaten können Sie jederzeit folgende Rechte
     ausüben:
@@ -70,7 +70,7 @@
     >
   </p>
 
-  <h2 class="h5 bakso">
+  <h2 class="h5">
     Zwecke der Datenverarbeitung durch die verantwortliche Stelle und Dritte
   </h2>
 
@@ -95,7 +95,7 @@
     kein Grund zur Annahme besteht, dass Sie ein überwiegendes schutzwürdiges
     Interesse an der Nichtweitergabe Ihrer Daten haben.
   </p>
-  <h2 class="h5 bakso">Löschung bzw. Sperrung der Daten</h2>
+  <h2 class="h5">Löschung bzw. Sperrung der Daten</h2>
   <p>
     Wir halten uns an die Grundsätze der Datenvermeidung und Datensparsamkeit.
     Wir speichern Ihre personenbezogenen Daten daher nur so lange, wie dies zur
@@ -106,11 +106,11 @@
     Vorschriften gesperrt oder gelöscht.
   </p>
 
-  <h2 class="h5 bakso">
+  <h2 class="h5">
     Erhebung und Speicherung personenbezogener Daten sowie Art und Zweck von
     deren Verwendung
   </h2>
-  <h2 class="h6 bakso">Beim Besuch der Website</h2>
+  <h2 class="h6">Beim Besuch der Website</h2>
   <p>
     Beim Aufrufen unserer Website https://www.baltersberg.de werden durch den
     auf Ihrem Endgerät zum Einsatz kommenden Browser automatisch Informationen
@@ -149,7 +149,7 @@
     dieser Datenschutzerklärung.
   </p>
 
-  <h2 class="h5 bakso">Anmeldung auf unserer Internetseite</h2>
+  <h2 class="h5">Anmeldung auf unserer Internetseite</h2>
   <p>
     Für die Anmeldung verwenden wir die Plattform http://tally.so. Für die
     Nutzung des Anmeldeformulars gelten die folgenden Datenschutzbestimmungen
@@ -208,7 +208,7 @@
     Verarbeitung Verantwortlichen stehen der betroffenen Person in diesem
     Zusammenhang als Ansprechpartner zur Verfügung.
   </p>
-  <h2 class="h5 bakso">Datensicherheit</h2>
+  <h2 class="h5">Datensicherheit</h2>
   <p>
     Wir verwenden innerhalb des Website-Besuchs das verbreitete SSL-Verfahren
     (Secure Socket Layer) in Verbindung mit der jeweils höchsten
@@ -228,7 +228,7 @@
     werden entsprechend der technologischen Entwicklung fortlaufend verbessert.
   </p>
 
-  <h2 class="h5 bakso">Aktualität und Änderung dieser Datenschutzerklärung</h2>
+  <h2 class="h5">Aktualität und Änderung dieser Datenschutzerklärung</h2>
   <p>
     Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2023.
   </p>
@@ -240,7 +240,7 @@
     https://www.baltersberg.de/datenschutz von Ihnen abgerufen und ausgedruckt
     werden.
   </p>
-  <h2 class="h5 bakso">Fragen an den Datenschutzbeauftragten</h2>
+  <h2 class="h5">Fragen an den Datenschutzbeauftragten</h2>
   <p>
     Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail
     oder wenden Sie sich direkt an die für den Datenschutz verantwortliche
@@ -250,14 +250,26 @@
 
 <style>
   .content {
-    max-width: 640px;
+    max-width: 800px;
+    padding: 80px 32px;
   }
 
   p {
     line-height: 1.5em;
+    margin: 0 0 1em 0;
   }
 
   li {
     margin-bottom: 0.5em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.25em;
+    margin: 1em 0 0.5em 0;
   }
 </style>
