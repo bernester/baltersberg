@@ -1,14 +1,26 @@
+$link: #2200ff;
+
 :root {
   --text: #252a57;
-  --link: #4e34ff;
-  --linkHover: #4e34ff;
-  --linkContrast: #ffffff;
+  --text-light: #4e5279;
+  --link: #{$link};
+  --link-hover: #{darken($link, 5%)};
+  --link-contrast: #ffffff;
   --highlight: #f83331;
-  --regular: 400;
-  --bold: 700;
-  --backgroundSecondary: #f3f5f7;
+  --background: #fff;
+  --background-secondary: #f9f4e7;
+  --logo-square: #f83331;
+  --logo-sign: #f8f602;
 }
 
 .bg-secondary {
-  background-color: var(--backgroundSecondary);
+  background-color: var(--background-secondary);
+}
+
+.color-link {
+  color: var(--link);
+}
+
+.color-highlight {
+  color: var(--highlight);
 }

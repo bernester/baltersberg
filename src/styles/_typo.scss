@@ -5,9 +5,16 @@
   font-style: normal;
 }
 
+:root {
+  --light: 300;
+  --regular: 400;
+  --bold: 700;
+}
+
 body {
-  font-family: Inter, sans-serif;
+  font-family: Lexend, sans-serif;
   color: var(--text);
+  font-weight: var(--regular);
 }
 
 h1,
@@ -20,31 +27,31 @@ p {
   margin: 0;
 }
 
-.text-center {
+.align-center {
   text-align: center;
 }
 
 .copy {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5em;
   margin: 0.5em 0 1em 0;
 
   &-small {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5em;
     margin: 0.5em 0 1em 0;
   }
 
   &-big {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.5em;
     margin: 0.5em 0 1em 0;
+    font-weight: var(--light);
   }
 }
 
 .bakso {
   font-family: Bakso, sans-serif;
-  color: var(--text);
 }
 
 .h1,
@@ -52,26 +59,28 @@ p {
 .h3,
 .h4,
 .h5 {
-  line-height: 1.25em;
+  line-height: 1em;
   font-weight: var(--bold);
 }
 
+$headline-base-size: 1.5rem;
+
 .h1 {
-  font-size: 4rem;
+  font-size: $headline-base-size * 4;
 }
 
 .h2 {
-  font-size: 3.5rem;
+  font-size: $headline-base-size * 3;
 }
 
 .h3 {
-  font-size: 3rem;
+  font-size: $headline-base-size * 2;
 }
 .h4 {
-  font-size: 2rem;
+  font-size: $headline-base-size * 1.5;
 }
 .h5 {
-  font-size: 1.5rem;
+  font-size: $headline-base-size;
 }
 
 a {

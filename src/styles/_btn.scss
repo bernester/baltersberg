@@ -1,5 +1,6 @@
 .btn {
-  border-radius: 100vh;
+  display: inline-flex;
+  border-radius: 8px;
   font-weight: bold;
   padding: 16px 32px;
   font-size: 16px;
@@ -7,11 +8,11 @@
   text-decoration: none;
   letter-spacing: 0.04em;
   background-color: var(--link);
-  color: var(--linkContrast);
+  color: var(--link-contrast);
   transition: all 0.04s;
 
   &:hover {
-    background-color: var(--linkHover);
+    background-color: var(--link-hover);
     transform: translateY(2px);
   }
 

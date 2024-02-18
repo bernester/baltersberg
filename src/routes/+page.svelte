@@ -1,50 +1,15 @@
 <script>
   import Prices from "../components/Prices.svelte";
+  import Hero from "../components/Hero.svelte";
+  import Summary from "../components/Summary.svelte";
 </script>
 
-<section class="section text-center ph-8">
-  <h1 class="bakso">
-    <span class="h4">Zeltlager Baltersberg</span><br />
-    <span class="h1 highlight">Freizeit für Alle!</span>
-  </h1>
-  <p class="bakso h2 mb-8">13.08.24 bis 21.08.24</p>
-  <p class="bakso h6 mb-8">Aktuell noch keine Anmeldung</p>
-  <!-- <a
-    href="https://tally.so/r/3EKKMN"
-    class="btn"
-    rel="nofollow"
-    target="blank"
-    aria-disabled="true">Jetzt anmelden</a
-  > -->
-</section>
+<Hero />
 
 <Prices />
 
-<section class="section">
-  <h2 class="bakso h4 mb-8 mh-8">Wichtige Informationen</h2>
-  <div class="section-content row ph-8">
-    <div class="col">
-      <p class="copy-small">
-        <b>Dauer:</b>
-        9 Tage <br />
-        Anreise: 13.08.24 ab 11 Uhr <br />
-        Abreise: 21.08.24 ab 11 Uhr
-      </p>
-    </div>
-    <div class="col">
-      <p class="copy-small">
-        <b>Ort:</b>
-        Direkt am Buchweiher in der Nähe von Argenbühl (Buch 4, 88260 Argenbühl)
-      </p>
-    </div>
-    <div class="col">
-      <p class="copy-small">
-        <b>Plätze</b>
-        Wir haben Platz für 32 Teilnehmende im Alter von 10 bis 16 Jahre
-      </p>
-    </div>
-  </div>
-</section>
+<Summary />
+
 <section class="section mv-20">
   <div class="section-content ph-8">
     <h2 class="bakso h4 mb-8">Was ist das Zeltlager Baltersberg?</h2>
@@ -59,11 +24,3 @@
     </p>
   </div>
 </section>
-
-<style lang="scss">
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-</style>
