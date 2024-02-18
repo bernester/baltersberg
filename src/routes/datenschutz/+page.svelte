@@ -264,11 +264,7 @@
   }
 
   h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h2 {
     line-height: 1.25em;
     margin: 1em 0 0.5em 0;
   }
