@@ -35,18 +35,12 @@
       >
     </div>
     <div class="disclaimer">
-      <p class="copy-small">
+      <p class="copy">
         Bei Fragen zu den Beiträgen, oder wenn ich noch weitere Unterstützung
         braucht, erreicht ihr uns jederzeit unter <a
           href="mailto:freizeitfueralle@gmail.com"
           target="_blank">freizeitfueralle@gmail.com</a
         >
-      </p>
-      <p class="copy-small">
-        <b>Zur Orientierung:</b>
-        Ein normales Einkommen entspricht einem monatlichen Gesamt-Brutto-Einkommen
-        von mindestens 4.000 EUR. Ein geringes Einkommen entspricht einem monatlichen
-        Gesamt-Brutto-Einkommen von 2.000 EUR und weniger.
       </p>
     </div>
   </div>
