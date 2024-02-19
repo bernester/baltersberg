@@ -18,7 +18,7 @@
         </div>
         <div class="col">
           <h3>Für 32 Teilnehmende</h3>
-          <p class="copy-small">Von 10 bis 16 Jahre</p>
+          <p class="copy-small">Von 10 bis 15 Jahre</p>
         </div>
       </div>
     </div>
