@@ -34,7 +34,6 @@
 
   .section {
     color: #222439;
-    // background-color: #fffd6b;
     background-color: var(--background-secondary);
     border-radius: 2rem;
     padding: 80px;
