@@ -36,7 +36,7 @@
   </footer>
 </div>
 
-<style type="scss">
+<style lang="scss">
   .layout {
     min-height: 100vh;
     display: flex;

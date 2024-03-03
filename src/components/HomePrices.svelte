@@ -1,7 +1,7 @@
 <section class="section prices">
   <div class="section-content ph-8">
-    <h2 class="bakso h4 mb-8 align-center">Wieviel kostet das?</h2>
-    <p class="copy-big align-center mb-8">
+    <h2 class="bakso h4 mb-8 text-center">Wieviel kostet das?</h2>
+    <p class="copy text-center mb-8">
       Einem echten Sommerabenteuer sollte nichts im Wege stehen. Daher bieten
       wir drei unterschiedliche Teilnahmebeiträge an, um allen die Teilnahme zu
       ermöglichen.
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div class="align-center mb-8">
+    <div class="text-center mb-8">
       <a
         href="https://tally.so/r/3EKKMN"
         class="btn"
@@ -35,7 +35,7 @@
       >
     </div>
     <div class="disclaimer">
-      <p class="copy">
+      <p class="copy-small">
         Bei Fragen zu den Beiträgen, oder wenn ich noch weitere Unterstützung
         braucht, erreicht ihr uns jederzeit unter <a
           href="mailto:freizeitfueralle@gmail.com"

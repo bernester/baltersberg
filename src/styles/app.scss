@@ -1,29 +1,33 @@
 @use "colors";
-@use "typo";
 @use "btn";
+@use "typo";
 @use "layout";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@layer base, layout, theme;
 
-a {
-  // text-underline-position: under;
-  // text-decoration-thickness: 8;
-}
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-html,
-body {
-  min-height: 100%;
-  width: 100%;
-}
+  a {
+    // text-underline-position: under;
+    // text-decoration-thickness: 8;
+  }
 
-html {
-  font-size: 100%;
-}
+  html,
+  body {
+    min-height: 100%;
+    width: 100%;
+  }
 
-body {
-  margin: 0;
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
 }

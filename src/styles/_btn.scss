@@ -2,9 +2,9 @@
   display: inline-flex;
   border-radius: 8px;
   font-weight: bold;
-  padding: 16px 32px;
-  font-size: 16px;
-  line-height: 24px;
+  padding: 24px 32px;
+  font-size: 20px;
+  line-height: 1.25em;
   text-decoration: none;
   letter-spacing: 0.04em;
   background-color: var(--link);
@@ -18,5 +18,29 @@
 
   &:active {
     transform: translateY(4px);
+  }
+
+  &.btn-secondary {
+    background-color: var(--linkSecondary);
+    color: var(--linkSecondary-contrast);
+
+    &:hover {
+      background-color: var(--linkSecondary-hover);
+    }
+  }
+
+  &.btn-invert {
+    background-color: var(--link-contrast);
+    color: var(--link);
+
+    &:hover {
+      background-color: var(--link-contrast);
+      color: var(--link-hover);
+    }
+  }
+
+  &.btn-small {
+    padding: 16px 24px;
+    font-size: 16px;
   }
 }

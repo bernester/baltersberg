@@ -1,4 +1,5 @@
 $link: #2200ff;
+$linkSecondary: #fdfd99;
 
 :root {
   --text: #252a57;
@@ -6,6 +7,9 @@ $link: #2200ff;
   --link: #{$link};
   --link-hover: #{darken($link, 5%)};
   --link-contrast: #ffffff;
+  --linkSecondary: #{$linkSecondary};
+  --linkSecondary-hover: #{darken($linkSecondary, 5%)};
+  --linkSecondary-contrast: #252a57;
   --highlight: #f83331;
   --background: #fff;
   --background-secondary: #f9f4e7;
@@ -13,14 +17,16 @@ $link: #2200ff;
   --logo-sign: #f8f602;
 }
 
-.bg-secondary {
-  background-color: var(--background-secondary);
-}
+@layer theme {
+  .bg-secondary {
+    background-color: var(--background-secondary);
+  }
 
-.color-link {
-  color: var(--link);
-}
+  .color-link {
+    color: var(--link);
+  }
 
-.color-highlight {
-  color: var(--highlight);
+  .color-highlight {
+    color: var(--highlight);
+  }
 }
