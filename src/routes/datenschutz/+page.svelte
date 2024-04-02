@@ -30,7 +30,7 @@
     Verantwortliche Stelle im Sinne der Datenschutzgesetze, insbesondere der
     EU-Datenschutzgrundverordnung (DSGVO), ist:
   </p>
-  <address>Bernhard Ruoff, Theobald-Kerner-Str. 6, 70372 Stuttgart</address>
+  <address>Bernhard Ruoff, Bronngasse 4, 71083 Herrenberg</address>
 
   <p>bernesterland@gmail.com</p>
 
