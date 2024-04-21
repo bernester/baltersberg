@@ -115,7 +115,7 @@
         <li>
           <p class="copy">
             <b>Freizeit (9 Tage)</b><br />
-            Dienstag, 11.08. bis Mittwoch, 21.08.
+            Sonntag, 11.08. bis Mittwoch, 21.08.
           </p>
         </li>
         <li>
