@@ -4,19 +4,20 @@
       Zeit für <br />Freizeit
     </h1>
     <p class="bakso h3 mb-8 color-highlight">13.08.24 - 21.08.24</p>
-    <a
+    Wir sind leider bereits ausgebucht
+    <!-- <a
       href="https://tally.so/r/3EKKMN"
       class="btn"
       rel="nofollow"
       target="blank">Jetzt anmelden</a
-    >
-    <div class="teaser">
+    > -->
+    <!-- <div class="teaser">
       <h2 class="bakso h5 mb-2">Wir haben noch viel Platz im Mädchenzelt.</h2>
       <p>
         Also wenn du noch jemanden kennst, die du gerne dabei haben würdest,
         schicke sie einfach zu uns 🌈🙌
       </p>
-    </div>
+    </div> -->
   </div>
 </section>
 
