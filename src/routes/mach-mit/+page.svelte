@@ -83,7 +83,7 @@
         unterstützt das Team als Nachwuchsteami.
       </p>
     </article>
-    <article>
+    <!-- <article>
       <h3 class="bakso h4">Bekommt man etwas dafür?</h3>
       <p class="copy">
         Bei der Freizeitbande wird man vor allem reich an Erfahrungen und
@@ -130,7 +130,7 @@
         Natürlich ist es oft schwer, so viel Zeit frei zu halten. Wir freuen uns
         aber um jegliche Unterstützung, egal wie lange.
       </p>
-    </article>
+    </article> -->
     <p class="copy">
       <b>
         Du hast noch weitere Fragen? Schreibe uns einfach an <a
@@ -143,12 +143,6 @@
 </section>
 
 <style lang="scss">
-  .unstyled {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
   article {
     margin-bottom: 3rem;
   }

@@ -1,10 +1,18 @@
 <section class="hero-wrapper">
   <div class="hero">
-    <h1 class="h1 bakso">
+    <h1 class="h1 bakso mb-4">
       Zeit für <br />Freizeit
     </h1>
-    <p class="bakso h3 mb-8 color-highlight">13.08.24 - 21.08.24</p>
-    Wir sind leider bereits ausgebucht
+
+    <div class="mb-8">
+      <div class="bakso  h4">
+        Wir sind bald wieder da:<br />
+        <span class="text-blue-600">12.08.25 - 22.08.25</span>
+      </div>
+      <span class="copy">Die Anmeldung startet Februar 2025</span>
+    </div>
+    
+
     <!-- <a
       href="https://tally.so/r/3EKKMN"
       class="btn"
@@ -36,18 +44,5 @@
     border-radius: 2rem;
     padding: 80px 0;
     max-width: 640px;
-  }
-
-  .teaser {
-    padding: 1rem 1.5rem;
-    margin: 2rem 0;
-    border-radius: 1rem;
-    // border: 4px solid;
-    background-image: linear-gradient(
-      109.6deg,
-      rgba(255, 179, 189, 1) 1.8%,
-      rgba(254, 248, 154, 1) 50.6%,
-      rgba(161, 224, 186, 1) 100.3%
-    );
   }
 </style>

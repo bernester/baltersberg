@@ -15,6 +15,9 @@ $linkSecondary: #fdfd99;
   --background-secondary: #f9f4e7;
   --logo-square: #f83331;
   --logo-sign: #f8f602;
+
+  --blue-600: #2563eb;
+
 }
 
 @layer theme {
@@ -29,4 +32,9 @@ $linkSecondary: #fdfd99;
   .color-highlight {
     color: var(--highlight);
   }
+
+  .text-blue-600 {
+    color: var(--blue-600);
+  }
+
 }
