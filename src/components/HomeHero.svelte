@@ -1,17 +1,14 @@
-<section class="hero-wrapper">
-  <div class="hero">
-    <h1 class="h1 bakso mb-4">
-      Zeit für <br />Freizeit
-    </h1>
+<script type="module">
+  import data from "./../data.json";
+  import { formatDate } from "$lib/utils";
+  import Headline from "./Headline.svelte";
+</script>
 
-    <div class="mb-8">
-      <div class="bakso  h4">
-        Wir sind bald wieder da:<br />
-        <span class="text-blue-600">12.08.25 - 22.08.25</span>
-      </div>
-      <span class="copy">Die Anmeldung startet Februar 2025</span>
-    </div>
-    
+<section class="max-w-screen-sm mx-auto">
+  <div class="">
+    <Headline tag="h1" style="title">Zeit für Freizeit für Alle.</Headline>
+
+    <p class="text-3xl/relaxed font-bolle">Das inklusive Sommerabenteuer für Alle.</p>
 
     <!-- <a
       href="https://tally.so/r/3EKKMN"
@@ -28,21 +25,3 @@
     </div> -->
   </div>
 </section>
-
-<style lang="scss">
-  .hero-wrapper {
-    padding: 1rem;
-    width: 100%;
-    margin-bottom: var(--space-default);
-    display: flex;
-    justify-content: center;
-  }
-
-  .hero {
-    // background: var(--background-secondary);
-    text-align: center;
-    border-radius: 2rem;
-    padding: 80px 0;
-    max-width: 640px;
-  }
-</style>

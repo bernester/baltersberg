@@ -1,78 +1,44 @@
-<section class="section prices">
-  <div class="section-content ph-8">
-    <h2 class="bakso h4 mb-8 text-center">Wieviel kostet das?</h2>
-    <p class="copy text-center mb-8">
-      Einem echten Sommerabenteuer sollte nichts im Wege stehen. Daher bieten
-      wir drei unterschiedliche Teilnahmebeiträge an, um allen die Teilnahme zu
-      ermöglichen.
+<script type="module">
+  import data from "./../data.json";
+</script>
+
+<section class="max-w-screen-sm">
+  <div class="py-8 max-w-[72ch]">
+    <h2 class="font-bolle uppercase text-6xl mb-[0.5em]">
+      Wie viel kostet die Freizeit?
+    </h2>
+    <p class="text-xl/relaxed mb-8">
+      Wir wollen, dass jeder beim Sommerabenteuer dabei sein kann. Deshalb gibt es drei verschiedene Preise.
     </p>
-    <div class="row mb-8">
-      <div class="col">
-        <div class="price-wrapper">
-          <h3 class="price-name">Normales <br />Einkommen</h3>
-          <strong class="bakso h3">240€</strong>
-        </div>
+    <div class="grid grid-cols-3 gap-4">
+      <div class="price-wrapper">
+        <h3 class="price-name">Normales Einkommen</h3>
+        <strong class="font-bolle text-4xl">{data.prices.regular}€</strong>
       </div>
-      <div class="col">
-        <div class="price-wrapper">
-          <h3 class="price-name">Geringes <br />Einkommen</h3>
-          <strong class="bakso h3">160€</strong>
-        </div>
+      <div class="price-wrapper">
+        <h3 class="price-name">Geringes Einkommen</h3>
+        <strong class="font-bolle text-4xl">{data.prices.low}€</strong>
       </div>
-      <div class="col">
-        <div class="price-wrapper">
-          <h3 class="price-name">Ohne festes Einkommen</h3>
-          <strong class="bakso h3">120€</strong>
-        </div>
+      <div class="price-wrapper">
+        <h3 class="price-name">Ohne festes Einkommen</h3>
+        <strong class="font-bolle text-4xl">{data.prices.none}€</strong>
       </div>
     </div>
-    <div class="text-center mb-8">
-      <a
-        href="https://tally.so/r/3EKKMN"
-        class="btn"
-        rel="nofollow"
-        target="blank">Jetzt anmelden</a
-      >
-    </div>
-    <div class="disclaimer">
-      <p class="copy-small">
-        Bei Fragen zu den Beiträgen, oder wenn ich noch weitere Unterstützung
-        braucht, erreicht ihr uns jederzeit unter <a
-          href="mailto:freizeitfueralle@gmail.com"
-          target="_blank">freizeitfueralle@gmail.com</a
+    {#if data.registrationOpen}
+        <a
+          href="https://tally.so/r/3EKKMN"
+          class="btn"
+          rel="nofollow"
+          target="blank">Jetzt anmelden</a
         >
+    {/if}
+    <div>
+      <p class="text-md">
+        Wenn ihr Fragen zu den Preisen habt oder mehr Unterstützung braucht, könnt ihr uns jederzeit unter <a
+        href="mailto:freizeitfueralle@gmail.com"
+        target="_blank" class="underline underline-offset-2 hover:no-underline">freizeitfueralle@gmail.com</a
+      > erreichen.
       </p>
     </div>
   </div>
 </section>
-
-<style lang="scss">
-  .prices {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 80px;
-  }
-
-  .price-wrapper {
-    padding: 32px;
-    display: flex;
-    flex-direction: column-reverse;
-    border-radius: 32px;
-    background: var(--background-secondary);
-    color: var(--text);
-    text-align: center;
-  }
-
-  .price-name {
-    font-weight: var(--normal);
-  }
-
-  .disclaimer {
-    color: var(--text);
-    // padding: 16px;
-    margin: 16px 0;
-    // border-radius: 16px;
-    // background: #f4f4f4;
-  }
-</style>
