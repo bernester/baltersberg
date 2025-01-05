@@ -2,14 +2,14 @@
   import "@fontsource/lexend/300.css";
   import "@fontsource/lexend/400.css";
   import "@fontsource/lexend/700.css";
-  import "../app.scss";
+  import "../app.css";
   import Logo from "@components/Logo.svelte";
 </script>
 
 <svelte:head>
   <title>Freizeit für Alle. Das inklusive Sommerzeltlager in Allgäu</title>
 </svelte:head>
-<div>
+<div class="flex flex-col items-center">
   <header>
     <a href="/" aria-label="Zur Startseite">
       <Logo />

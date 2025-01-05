@@ -3,7 +3,7 @@
 </script>
 
 <section class="max-w-screen-sm">
-  <div class="py-8 max-w-[72ch]">
+  <div class="py-8">
     <h2 class="font-bolle uppercase text-6xl mb-[0.5em]">
       Wie viel kostet die Freizeit?
     </h2>
@@ -11,17 +11,17 @@
       Wir wollen, dass jeder beim Sommerabenteuer dabei sein kann. Deshalb gibt es drei verschiedene Preise.
     </p>
     <div class="grid grid-cols-3 gap-4">
-      <div class="price-wrapper">
-        <h3 class="price-name">Normales Einkommen</h3>
-        <strong class="font-bolle text-4xl">{data.prices.regular}€</strong>
+      <div>
+        <h3 class="text-lg font-bold">Normales Einkommen</h3>
+        <strong class="font-bolle text-5xl">{data.prices.regular}€</strong>
       </div>
-      <div class="price-wrapper">
-        <h3 class="price-name">Geringes Einkommen</h3>
-        <strong class="font-bolle text-4xl">{data.prices.low}€</strong>
+      <div>
+        <h3 class="text-lg font-bold">Geringes Einkommen</h3>
+        <strong class="font-bolle text-5xl">{data.prices.low}€</strong>
       </div>
-      <div class="price-wrapper">
-        <h3 class="price-name">Ohne festes Einkommen</h3>
-        <strong class="font-bolle text-4xl">{data.prices.none}€</strong>
+      <div>
+        <h3 class="text-lg font-bold">Ohne festes Einkommen</h3>
+        <strong class="font-bolle text-5xl">{data.prices.none}€</strong>
       </div>
     </div>
     {#if data.registrationOpen}

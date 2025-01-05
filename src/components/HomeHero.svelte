@@ -1,27 +1,22 @@
 <script type="module">
   import data from "./../data.json";
-  import { formatDate } from "$lib/utils";
   import Headline from "./Headline.svelte";
 </script>
 
-<section class="max-w-screen-sm mx-auto">
+<section class="max-w-screen-sm">
   <div class="">
     <Headline tag="h1" style="title">Zeit für Freizeit für Alle.</Headline>
 
-    <p class="text-3xl/relaxed font-bolle">Das inklusive Sommerabenteuer für Alle.</p>
+    <p class="text-2xl/relaxed font-bold">
+      Das inklusive Sommerabenteuer für Alle.
+    </p>
 
-    <!-- <a
+
+    <a
       href="https://tally.so/r/3EKKMN"
-      class="btn"
+       class="inline-block px-6 py-3.5 text-base font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
       rel="nofollow"
       target="blank">Jetzt anmelden</a
-    > -->
-    <!-- <div class="teaser">
-      <h2 class="bakso h5 mb-2">Wir haben noch viel Platz im Mädchenzelt.</h2>
-      <p>
-        Also wenn du noch jemanden kennst, die du gerne dabei haben würdest,
-        schicke sie einfach zu uns 🌈🙌
-      </p>
-    </div> -->
+    >
   </div>
 </section>
