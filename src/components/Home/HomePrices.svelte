@@ -1,11 +1,13 @@
 <script type="module">
   import RegisterButton from "$components/Common/RegisterButton.svelte";
   import { Circle } from "$lib/annotate";
-  import { headlineClasses, linkClasses } from "$lib/styles";
+  import { headlineClasses, linkClasses, sectionClasses } from "$lib/styles";
   import data from "../../data.json";
+
+  const PriceClasses = "font-bolle text-4xl/none md:text-6xl/none";
 </script>
 
-<section class="max-w-screen-sm mx-auto py-8 mb-8" id="mehr">
+<section class={`${sectionClasses.default}`} id="mehr">
   <div class="flex flex-col gap-8 text-center">
     <h2 class={headlineClasses}>
       Was <span use:Circle style="inline-block">kostet</span> die Freizeit?
@@ -17,15 +19,15 @@
     </p>
     <div class="grid grid-cols-3 gap-4">
       <div>
-        <div class="font-bolle text-6xl/none">{data.prices.regular}€</div>
+        <div class={PriceClasses}>{data.prices.regular}€</div>
         <div class="text-base font-bold">Normales <br />Einkommen</div>
       </div>
       <div>
-        <div class="font-bolle text-6xl/none">{data.prices.low}€</div>
+        <div class={PriceClasses}>{data.prices.low}€</div>
         <div class="text-base font-bold">Geringes <br />Einkommen</div>
       </div>
       <div>
-        <div class="font-bolle text-6xl/none">{data.prices.none}€</div>
+        <div class={PriceClasses}>{data.prices.none}€</div>
         <div class="text-base font-bold">Ohne festes <br />Einkommen</div>
       </div>
     </div>
@@ -34,11 +36,11 @@
     {/if}
 
     <div class="space-y-2">
-      <p class="text-sm text-balance">
+      <!-- <p class="text-sm text-balance">
         Bitte wählt den Preis, der am besten zu eurer finanziellen Situation
         passt. Wir vertrauen darauf, dass ihr den für euch passenden Preis
         wählt.
-      </p>
+      </p> -->
       <p class="text-sm text-balance">
         Wenn ihr Fragen zu den Preisen habt oder Hilfe braucht, schreibt uns
         eine E-Mail an: <a

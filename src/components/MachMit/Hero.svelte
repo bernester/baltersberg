@@ -1,10 +1,14 @@
 <script>
   import { Marker } from "$lib/annotate";
-  import { linkClasses, primaryButtonClasses } from "$lib/styles";
+  import {
+    linkClasses,
+    primaryButtonClasses,
+    sectionClasses,
+  } from "$lib/styles";
   import { scrollTo } from "svelte-scrolling";
 </script>
 
-<section class="max-w-screen-sm mx-auto py-8 mb-8">
+<section class={`${sectionClasses.default}`}>
   <h1
     class="text-6xl/tight md:text-8xl/tight font-bolle uppercase text-center mb-8"
   >
@@ -25,7 +29,7 @@
       rel="presentation">Häufige Fragen</a
     >
   </div>
-  <p class="text-lg/relaxed text-center text-pretty mb-8">
+  <p class="text-md/relaxed md:text-lg/relaxed text-center text-pretty mb-8">
     Du liebst die Arbeit mit Kindern und Jugendlichen? Du bist spontan, wild und
     weltoffen? Du interessierst dich für Inklusion, Demokratie und
     interkulturellen Austausch? Du findest Nachhaltigkeit und gesunde Ernährung

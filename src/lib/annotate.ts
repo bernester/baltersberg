@@ -5,7 +5,7 @@ function applyAnnotation(node: HTMLElement, options: any) {
   const annotation = annotate(node, options);
   setTimeout(() => {
     annotation.show();
-  }, 1000);
+  }, 500);
 }
 
 export function Underline(node: HTMLElement) {
@@ -14,6 +14,7 @@ export function Underline(node: HTMLElement) {
     strokeWidth: 2,
     iterations: 4,
     padding: 0,
+    color: "var(--color-black)",
     multiline: true,
   };
 

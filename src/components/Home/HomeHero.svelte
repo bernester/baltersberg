@@ -1,5 +1,5 @@
 <script type="module">
-  import { linkClasses } from "$lib/styles";
+  import { linkClasses, sectionClasses } from "$lib/styles";
   import { formatDate } from "$lib/utils";
   import data from "../../data.json";
   import { Marker, Underline } from "$lib/annotate";
@@ -7,7 +7,7 @@
   import { scrollTo } from "svelte-scrolling";
 </script>
 
-<section class="max-w-screen-sm mx-auto p-8 mb-8">
+<section class={`${sectionClasses.default}`}>
   <div class="flex flex-col gap-6 items-center text-center">
     <h1 class="text-6xl/tight md:text-9xl/tight font-bolle uppercase">
       Zeit für

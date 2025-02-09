@@ -6,5 +6,11 @@ export const primaryButtonClasses =
 
 export const headlineClasses =
   "text-5xl/none md:text-7xl/none font-bolle uppercase";
+
 export const subHeadlineClasses =
   "text-2xl/none md:text-5xl/none font-bolle uppercase";
+
+export const sectionClasses = {
+  default: "max-w-screen-md mx-auto p-8",
+  wide: "max-w-screen-lg mx-auto p-8 mb-8",
+};

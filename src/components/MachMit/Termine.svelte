@@ -1,18 +1,18 @@
 <script>
   import { Circle, Marker, Underline } from "$lib/annotate";
-  import { headlineClasses, linkClasses } from "$lib/styles";
+  import { headlineClasses, linkClasses, sectionClasses } from "$lib/styles";
 
   const TermineTitleClasses =
-    "text-xl/none md:text-3xl/none font-bolle uppercase mb-2";
-  const TermineSummaryClasses = "text-lg/relaxed";
+    "text-2xl/none md:text-3xl/none font-bolle uppercase mb-2";
+  const TermineSummaryClasses = "text-md md:text-lg";
 </script>
 
-<section class="max-w-screen-lg mx-auto py-8 mb-8">
-  <h2 class={`${headlineClasses} text-center mb-20`}>
+<section class={`${sectionClasses.wide}`}>
+  <h2 class={`${headlineClasses} text-center mb-12 md:mb-20`}>
     Termine <span use:Circle={"green"}>2025</span>
   </h2>
 
-  <div class="grid grid-cols-4 gap-8">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
     <article>
       <h3 class={TermineTitleClasses}>
         <span use:Underline class="inline-block">Kick-Off</span> Wochenende
@@ -21,7 +21,8 @@
       <a
         href="https://www.google.com/calendar/render?action=TEMPLATE&text=Kick-Off+Wochenende&dates=20250523T150000Z/20250525T130000Z"
         target="_blank"
-        class={linkClasses}>In den Kalender eintragen</a
+        class={`${linkClasses} ${TermineSummaryClasses}`}
+        >In den Kalender eintragen</a
       >
     </article>
     <article>
@@ -32,7 +33,8 @@
       <a
         href="https://www.google.com/calendar/render?action=TEMPLATE&text=Aufbau+und+Schulungen&dates=20250808T080000Z/20250811T180000Z"
         target="_blank"
-        class={linkClasses}>In den Kalender eintragen</a
+        class={`${linkClasses} ${TermineSummaryClasses}`}
+        >In den Kalender eintragen</a
       >
     </article>
     <article>
@@ -43,7 +45,8 @@
       <a
         href="https://www.google.com/calendar/render?action=TEMPLATE&text=Freizeit+f%C3%BCr+Alle&dates=20250812T090000Z/20250822T090000Z"
         target="_blank"
-        class={linkClasses}>In den Kalender eintragen</a
+        class={`${linkClasses} ${TermineSummaryClasses}`}
+        >In den Kalender eintragen</a
       >
     </article>
     <article>
@@ -54,7 +57,8 @@
       <a
         href="https://www.google.com/calendar/render?action=TEMPLATE&text=Abbau&dates=20250822T090000Z/20250823T160000Z"
         target="_blank"
-        class={linkClasses}>In den Kalender eintragen</a
+        class={`${linkClasses} ${TermineSummaryClasses}`}
+        >In den Kalender eintragen</a
       >
     </article>
   </div>

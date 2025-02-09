@@ -1,11 +1,11 @@
 <script>
-  import { headlineClasses, linkClasses } from "$lib/styles";
+  import { headlineClasses, linkClasses, sectionClasses } from "$lib/styles";
 
-  const QuestionClasses = "text-xl font-bold mb-4";
-  const AnswerClasses = "text-lg/relaxed mb-8";
+  const QuestionClasses = "text-lg md:text-xl font-bold mb-4";
+  const AnswerClasses = "text-md/relaxed md:text-lg/relaxed mb-8";
 </script>
 
-<section id="faq" class="max-w-screen-sm mx-auto py-8">
+<section id="faq" class={`${sectionClasses.default}`}>
   <h2 class={`${headlineClasses} text-center mb-8`}>Häufige Fragen</h2>
 
   <article>

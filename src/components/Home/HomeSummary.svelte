@@ -1,15 +1,15 @@
 <script type="module">
   import data from "../../data.json";
   import { formatDate } from "$lib/utils";
-  import { headlineClasses } from "$lib/styles";
+  import { headlineClasses, sectionClasses } from "$lib/styles";
   import { Marker } from "$lib/annotate";
 </script>
 
-<section class="max-w-screen-lg mx-auto py-8 mb-8 space-y-6">
+<section class={`${sectionClasses.wide} space-y-6`}>
   <h2 class={`${headlineClasses} text-center mb-8`}>
-    Die Freizeit auf einen Blick.
+    Die Freizeit auf einen Blick
   </h2>
-  <div class="grid grid-cols-3 gap-x-8 gap-y-6">
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">
     <dl class="space-y-1">
       <dt class="font-bold text-base">Dauer:</dt>
       <dd class="text-lg text-balance">

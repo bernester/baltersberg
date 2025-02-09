@@ -10,6 +10,7 @@
 :root {
   --color-yellow: theme("colors.yellow.transparent");
   --color-green: theme("colors.green.transparent");
+  --color-black: theme("colors.black.transparent");
 }
 
 body {
