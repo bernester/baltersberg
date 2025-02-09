@@ -10,7 +10,7 @@
 <svelte:head>
   <title>Freizeit für Alle. Das inklusive Sommerzeltlager in Allgäu</title>
 </svelte:head>
-<header class="p-8 text-center">
+<header class="p-8 flex justify-center">
   <a href="/" aria-label="Zur Startseite">
     <Logo />
   </a>

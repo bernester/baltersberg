@@ -6,9 +6,6 @@
 </script>
 
 <Hero />
-
 <Aufgaben />
-
 <Termine />
-
 <Faq />

@@ -5,7 +5,7 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   aria-hidden="true"
   height="72px"
-  width="auto"
+  width="72px"
 >
   <title>Zeltlager Baltersberg</title>
   <path
