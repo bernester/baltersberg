@@ -9,7 +9,7 @@
       <span use:Marker={"green"} class="inline-block">Mach mit</span> in unserem
       Team
     </h2>
-    <a href="/mach-mit" class={`${primaryButtonClasses} text-green-light`}
+    <a href="/mach-mit" class={`${primaryButtonClasses} !text-green-light`}
       >Mehr erfahren</a
     >
   </div>
