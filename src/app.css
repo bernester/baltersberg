@@ -7,6 +7,12 @@
   src: url("/fonts/MFHeavyHandedLargeRegular/font.woff2") format("woff2");
 }
 
+:root {
+  --highlight: hsla(59, 100%, 50%, 0.6);
+  --box: hsla(59, 100%, 50%, 0.6);
+  /* --box: hsla(336, 100%, 64%, 0.6); */
+}
+
 body {
   font-family: Lexend, sans-serif;
 }

@@ -1,44 +1,45 @@
 <script type="module">
+  import { Box, Circle } from "$lib/annotate";
+  import { linkClasses } from "$lib/styles";
   import data from "./../data.json";
+  import Headline from "./Headline.svelte";
+  import RegisterButton from "./RegisterButton.svelte";
 </script>
 
-<section class="max-w-screen-sm">
-  <div class="py-8">
-    <h2 class="font-bolle uppercase text-6xl mb-[0.5em]">
-      Wie viel kostet die Freizeit?
-    </h2>
-    <p class="text-xl/relaxed mb-8">
-      Wir wollen, dass jeder beim Sommerabenteuer dabei sein kann. Deshalb gibt es drei verschiedene Preise.
+<section class="max-w-screen-sm mx-auto py-8 mb-8">
+  <div class="flex flex-col gap-8 text-center">
+    <Headline tag="h2" style="headline"
+      >Was <span use:Circle>kostet</span> die Freizeit?</Headline
+    >
+
+    <p class="text-xl/relaxed">
+      Wir wollen, dass jeder beim Sommerabenteuer dabei sein kann. Deshalb gibt
+      es drei verschiedene Preise.
     </p>
     <div class="grid grid-cols-3 gap-4">
       <div>
-        <h3 class="text-lg font-bold">Normales Einkommen</h3>
-        <strong class="font-bolle text-5xl">{data.prices.regular}€</strong>
+        <div class="font-bolle text-6xl/none">{data.prices.regular}€</div>
+        <div class="text-base font-bold">Normales <br />Einkommen</div>
       </div>
       <div>
-        <h3 class="text-lg font-bold">Geringes Einkommen</h3>
-        <strong class="font-bolle text-5xl">{data.prices.low}€</strong>
+        <div class="font-bolle text-6xl/none">{data.prices.low}€</div>
+        <div class="text-base font-bold">Geringes <br />Einkommen</div>
       </div>
       <div>
-        <h3 class="text-lg font-bold">Ohne festes Einkommen</h3>
-        <strong class="font-bolle text-5xl">{data.prices.none}€</strong>
+        <div class="font-bolle text-6xl/none">{data.prices.none}€</div>
+        <div class="text-base font-bold">Ohne festes <br />Einkommen</div>
       </div>
     </div>
     {#if data.registrationOpen}
-        <a
-          href="https://tally.so/r/3EKKMN"
-          class="btn"
-          rel="nofollow"
-          target="blank">Jetzt anmelden</a
-        >
+      <RegisterButton />
     {/if}
-    <div>
-      <p class="text-md">
-        Wenn ihr Fragen zu den Preisen habt oder mehr Unterstützung braucht, könnt ihr uns jederzeit unter <a
+    <p class="text-base">
+      Wenn ihr Fragen zu den Preisen habt oder Hilfe braucht, schreibt uns eine
+      E-Mail an: <a
         href="mailto:freizeitfueralle@gmail.com"
-        target="_blank" class="underline underline-offset-2 hover:no-underline">freizeitfueralle@gmail.com</a
-      > erreichen.
-      </p>
-    </div>
+        target="_blank"
+        class={linkClasses}>freizeitfueralle@gmail.com</a
+      > Wir helfen euch gerne! 😊
+    </p>
   </div>
 </section>

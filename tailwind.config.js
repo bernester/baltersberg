@@ -1,14 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
     extend: {
       fontFamily: {
-        lexend: ['Lexend', 'sans-serif'],
-        bolle: ['Bolle', 'sans-serif'],
+        lexend: ["Lexend", "sans-serif"],
+        bolle: ["Bolle", "sans-serif"],
+      },
+      colors: {
+        link: "#1a0dab",
       },
     },
   },
   plugins: [],
-}
-
+};

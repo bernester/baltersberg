@@ -3,7 +3,8 @@
   import "@fontsource/lexend/400.css";
   import "@fontsource/lexend/700.css";
   import "../app.css";
-  import Logo from "@components/Logo.svelte";
+  import Logo from "$components/Logo.svelte";
+  import { linkClasses } from "$lib/styles";
 </script>
 
 <svelte:head>
@@ -15,21 +16,27 @@
       <Logo />
     </a>
   </header>
-  <main>
+  <main class="w-full">
     <slot />
   </main>
-  <footer>
+
+  <footer class="max-w-screen-sm mx-auto py-8 text-sm text-center space-y-4">
     <p>
-      Das Zeltlager Baltersberg ist unter der Trägerschaft des
+      Freizeit für Alle ist ein Projekt der Freizeitbande e.V. unter der
+      Trägerschaft des
       <a
         href="https://allgaeu-oberschwaben.bdkj.info/"
         target="_blank"
         rel="nofollow"
+        class={linkClasses}
       >
         Katholischen Jugendreferat Ravensburg
-      </a><br />
-      <a href="/datenschutz">Datenschutzerklärung</a>
-      &copy; 2017-2024 Zeltlager Baltersberg
+      </a>
+    </p>
+    <p>
+      <a href="/impressum" class={linkClasses}>Impressum</a>
+      <span class="mx-2">•</span>
+      <a href="/datenschutz" class={linkClasses}>Datenschutzerklärung</a>
     </p>
   </footer>
 </div>

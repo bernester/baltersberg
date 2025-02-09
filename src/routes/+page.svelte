@@ -12,7 +12,7 @@
 
 <HomeSummary />
 
-<article class="max-w-screen-sm">
+<article class="max-w-screen-sm mx-auto py-8 mb-8">
   <div>
     <Headline>Was ist die Freizeit für Alle?</Headline>
     <p class="copy">
