@@ -1,6 +1,6 @@
 <script type="module">
   import RegisterButton from "$components/Common/RegisterButton.svelte";
-  import { Circle } from "$lib/annotate";
+  import { Circle, Underline } from "$lib/annotate";
   import { headlineClasses, linkClasses, sectionClasses } from "$lib/styles";
   import data from "../../data.json";
 
@@ -15,16 +15,16 @@
 
     <p class="text-xl/relaxed text-balance">
       Damit sich alle unsere Freizeit leisten können, gibt es drei verschiedene
-      Preise.
+      Preise, die sich <span use:Underline>nach eurem Haushaltseinkommen</span> richten.
     </p>
     <div class="grid grid-cols-3 gap-4">
       <div>
         <div class={PriceClasses}>{data.prices.regular}€</div>
-        <div class="text-base font-bold">Normales <br />Einkommen</div>
+        <div class="text-base font-bold">Bei Normalem <br />Einkommen</div>
       </div>
       <div>
         <div class={PriceClasses}>{data.prices.low}€</div>
-        <div class="text-base font-bold">Geringes <br />Einkommen</div>
+        <div class="text-base font-bold">Bei Geringem <br />Einkommen</div>
       </div>
       <div>
         <div class={PriceClasses}>{data.prices.none}€</div>
