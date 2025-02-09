@@ -5,7 +5,9 @@
   import Termine from "$components/MachMit/Termine.svelte";
 </script>
 
-<Hero />
-<Aufgaben />
-<Termine />
-<Faq />
+<div class="space-y-20">
+  <Hero />
+  <Aufgaben />
+  <Termine />
+  <Faq />
+</div>

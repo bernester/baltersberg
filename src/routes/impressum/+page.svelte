@@ -3,7 +3,7 @@
     <h1 class="text-lg font-bold mb-2">Impressum</h1>
     <p class="mb-4 text-sm"><strong>Angaben gemäß § 5 TMG:</strong></p>
     <p class="mb-4 text-sm">
-      Freieitbande e.V<br />
+      Freizeitbande e.V<br />
       c/o Bernhard Ruoff<br />
       Bronngasse 4<br />
       71083 Herrenberg
@@ -16,7 +16,7 @@
       <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong>
     </p>
     <p class="mb-4 text-sm">
-      Freieitbande e.V<br />
+      Freizeitbande e.V<br />
       c/o Bernhard Ruoff<br />
       Bronngasse 4<br />
       71083 Herrenberg
