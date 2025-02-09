@@ -65,9 +65,9 @@
         <span use:Marker={"green"}>Küche</span>
       </h3>
       <p class={ParagraphClasses}>
-        Essen ist die wichtigste Mahlzeit des Tages. In Jule, unserem
-        Küchenzelt, zaubert das Küchenteam täglich vier Mahlzeiten. <span
-          use:Underline>Vegetarisch, regional und unfassbar lecker.</span
+        In Jule, unserem Küchenzelt, zaubert das Küchenteam täglich vier
+        Mahlzeiten. <span use:Underline
+          >Vegetarisch, regional und unfassbar lecker.</span
         >
       </p>
     </article>
@@ -78,7 +78,7 @@
       <p class={ParagraphClasses}>
         Der Badesee ist ein besonders wichtiger Ort. Als Badeaufsicht sorgst du
         dafür, <span use:Underline
-          >dass damit niemand auf den Badespaß verzichten muss</span
+          >dass niemand auf den Badespaß verzichten muss</span
         > und alles sicher abläuft.
       </p>
     </article>
@@ -87,8 +87,8 @@
         <span use:Marker={"green"}>Und der ganze Rest</span>
       </h3>
       <p class={ParagraphClasses}>
-        Daneben gibt es noch viele weitere wichtige Aufgaben und Aufgaben. Von
-        Einkaufen, Recyling, Sauberkeit und kleinen Reparaturen.
+        Daneben gibt es noch viele weitere wichtige Aufgaben. Von Einkaufen,
+        Recyling, Sauberkeit und kleinen Reparaturen.
       </p>
     </article>
   </section>
