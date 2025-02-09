@@ -6,7 +6,8 @@ export function Underline(node: HTMLElement) {
     const annotation = annotate(node, {
       type: "underline",
       strokeWidth: 2,
-      iterations: 6,
+      iterations: 4,
+      padding: 0,
       multiline: true,
     });
     setTimeout(() => {
@@ -15,12 +16,15 @@ export function Underline(node: HTMLElement) {
   });
 }
 
-export function Circle(node: HTMLElement) {
+export function Circle(
+  node: HTMLElement,
+  color: "green" | "yellow" = "yellow"
+) {
   onMount(() => {
     const annotation = annotate(node, {
       type: "circle",
       strokeWidth: 4,
-      color: "var(--box)",
+      color: color === "green" ? "var(--color-green)" : "var(--color-yellow)",
       multiline: true,
     });
     setTimeout(() => {
@@ -44,11 +48,14 @@ export function Box(node: HTMLElement) {
   });
 }
 
-export function Marker(node: HTMLElement) {
+export function Marker(
+  node: HTMLElement,
+  color: "green" | "yellow" = "yellow"
+) {
   onMount(() => {
     const annotation = annotate(node, {
       type: "highlight",
-      color: "var(--highlight)",
+      color: color === "green" ? "var(--color-green)" : "var(--color-yellow)",
       multiline: true,
       iterations: 1,
     });
@@ -56,4 +63,7 @@ export function Marker(node: HTMLElement) {
       annotation.show();
     }, 1000);
   });
+}
+function theme(transparent: any) {
+  throw new Error("Function not implemented.");
 }

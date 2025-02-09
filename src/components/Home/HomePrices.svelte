@@ -1,13 +1,15 @@
 <script type="module">
+  import RegisterButton from "$components/Common/RegisterButton.svelte";
   import { Circle } from "$lib/annotate";
-  import { headline, linkClasses } from "$lib/styles";
-  import data from "./../data.json";
-  import RegisterButton from "./RegisterButton.svelte";
+  import { headlineClasses, linkClasses } from "$lib/styles";
+  import data from "../../data.json";
 </script>
 
-<section class="max-w-screen-sm mx-auto py-8 mb-8">
+<section class="max-w-screen-sm mx-auto py-8 mb-8" id="mehr">
   <div class="flex flex-col gap-8 text-center">
-    <h2 class={headline}>Was <span use:Circle>kostet</span> die Freizeit?</h2>
+    <h2 class={headlineClasses}>
+      Was <span use:Circle style="inline-block">kostet</span> die Freizeit?
+    </h2>
 
     <p class="text-xl/relaxed text-balance">
       Damit sich alle unsere Freizeit leisten können, gibt es drei verschiedene

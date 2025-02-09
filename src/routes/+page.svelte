@@ -1,12 +1,12 @@
 <script>
-  import HomePrices from "$components/HomePrices.svelte";
-  import HomeHero from "$components/HomeHero.svelte";
-  import HomeSummary from "$components/HomeSummary.svelte";
-  import HomeTeamAd from "$components/HomeTeamAd.svelte";
-  import { headline } from "$lib/styles";
+  import HomePrices from "$components/Home/HomePrices.svelte";
+  import HomeHero from "$components/Home/HomeHero.svelte";
+  import HomeSummary from "$components/Home/HomeSummary.svelte";
+  import HomeTeamAd from "$components//Home/HomeTeamAd.svelte";
+  import { headlineClasses } from "$lib/styles";
   import { Underline, Marker } from "$lib/annotate";
   import data from "./../data.json";
-  import RegisterButton from "$components/RegisterButton.svelte";
+  import RegisterButton from "$components/Common/RegisterButton.svelte";
 </script>
 
 <HomeHero />
@@ -16,7 +16,7 @@
 <HomeSummary />
 
 <article class="max-w-screen-sm mx-auto py-8 mb-8">
-  <h2 class={`${headline} mb-8 text-center text-balance`}>
+  <h2 class={`${headlineClasses} mb-8 text-center text-balance`}>
     Was ist die <span use:Marker class="inline-block">Freizeit für Alle?</span>
   </h2>
   <p class="text-lg/relaxed text-pretty mb-4">
