@@ -5,7 +5,20 @@ function applyAnnotation(node: HTMLElement, options: any) {
   const annotation = annotate(node, options);
   setTimeout(() => {
     annotation.show();
-  }, 500);
+  }, 200);
+}
+
+function createObserver(node: HTMLElement, options: any) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        applyAnnotation(node, options);
+        observer.unobserve(node); // Stop observing after annotation is applied
+      }
+    });
+  });
+
+  observer.observe(node);
 }
 
 export function Underline(node: HTMLElement) {
@@ -18,8 +31,8 @@ export function Underline(node: HTMLElement) {
     multiline: true,
   };
 
-  onMount(() => applyAnnotation(node, options));
-  $: applyAnnotation(node, options);
+  onMount(() => createObserver(node, options));
+  $: createObserver(node, options);
 }
 
 export function Circle(
@@ -33,8 +46,8 @@ export function Circle(
     multiline: true,
   };
 
-  onMount(() => applyAnnotation(node, options));
-  $: applyAnnotation(node, options);
+  onMount(() => createObserver(node, options));
+  $: createObserver(node, options);
 }
 
 export function Marker(
@@ -48,6 +61,6 @@ export function Marker(
     iterations: 1,
   };
 
-  onMount(() => applyAnnotation(node, options));
-  $: applyAnnotation(node, options);
+  onMount(() => createObserver(node, options));
+  $: createObserver(node, options);
 }
