@@ -1,0 +1,12 @@
+{
+  "registrationOpen": true,
+  "dates": {
+    "CurrentStart": "2025-08-12",
+    "CurrentEnd": "2025-08-22"
+  },
+  "prices": {
+    "regular": 280,
+    "low": 180,
+    "none": 140
+  }
+}

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bolle";
+  src: url("/fonts/MFHeavyHandedLargeRegular/font.woff2") format("woff2");
+}
+
+:root {
+  --color-yellow: theme("colors.yellow.transparent");
+  --color-green: theme("colors.green.transparent");
+  --color-black: theme("colors.black.transparent");
+}
+
+body {
+  font-family: Lexend, sans-serif;
+}
