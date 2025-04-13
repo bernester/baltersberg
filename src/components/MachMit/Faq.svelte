@@ -36,9 +36,9 @@
   </article>
   <p class="text-xl font-bold mb-4">
     Du hast noch weitere Fragen? Schreibe uns einfach an <a
-      href="mailto:freizeitfueralle@gmail.com"
+      href="mailto:hallo@freizeitban.de"
       class={linkClasses}
-      target="_blank">freizeitfueralle@gmail.com</a
+      target="_blank">hallo@freizeitban.de</a
     >
   </p>
 </section>

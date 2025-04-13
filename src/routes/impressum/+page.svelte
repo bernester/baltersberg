@@ -11,7 +11,7 @@
   </section>
   <section class="mb-4">
     <h2 class="text-md font-bold mb-2">Kontakt</h2>
-    <p class="mb-4 text-sm">E-Mail: freizeitfueralle@gmail.com</p>
+    <p class="mb-4 text-sm">E-Mail: orga@freizeitban.de</p>
     <p class="mb-4 text-sm">
       <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong>
     </p>
