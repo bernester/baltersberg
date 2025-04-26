@@ -44,9 +44,9 @@
       <p class="text-sm text-balance">
         Wenn ihr Fragen zu den Preisen habt oder Hilfe braucht, schreibt uns
         eine E-Mail an: <a
-          href="mailto:hallo@freizeitban.de"
+          href="mailto:freizeitfueralle@gmail.com"
           target="_blank"
-          class={linkClasses}>hallo@freizeitban.de</a
+          class={linkClasses}>freizeitfueralle@gmail.com</a
         > Wir helfen euch gerne! 😊
       </p>
     </div>
