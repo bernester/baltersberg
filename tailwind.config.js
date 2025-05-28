@@ -9,9 +9,9 @@ export default {
       },
       colors: {
         black: {
-          DEFAULT: "oklch(20% 0.07 257)",
-          transparent: "oklch(20% 0.07 257 / .6)",
-          light: "oklch(20% 0.03 257)",
+          DEFAULT: "oklch(10% 0.07 257)",
+          transparent: "oklch(10% 0.07 257 / .6)",
+          light: "oklch(10% 0.03 257)",
         },
         white: "#f5f5f5",
         yellow: {

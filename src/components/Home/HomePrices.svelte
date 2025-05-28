@@ -20,15 +20,21 @@
     <div class="grid grid-cols-3 gap-4">
       <div>
         <div class={PriceClasses}>{data.prices.regular}€</div>
-        <div class="text-base font-bold">Bei höherem/mittlerem Einkommen</div>
+        <div class="text-sm md:text-base font-bold">
+          Ab mittlerem <br />Einkommen
+        </div>
       </div>
       <div>
         <div class={PriceClasses}>{data.prices.low}€</div>
-        <div class="text-base font-bold">Bei geringem <br />Einkommen</div>
+        <div class="text-sm md:text-base font-bold">
+          Bei geringem <br />Einkommen
+        </div>
       </div>
       <div>
         <div class={PriceClasses}>{data.prices.none}€</div>
-        <div class="text-base font-bold">Ohne festes <br />Einkommen</div>
+        <div class="text-sm md:text-base font-bold">
+          Ohne festes <br />Einkommen
+        </div>
       </div>
     </div>
     {#if data.registrationOpen}
