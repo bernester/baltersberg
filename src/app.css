@@ -5,6 +5,7 @@
 @font-face {
   font-family: "Bolle";
   src: url("/fonts/MFHeavyHandedLargeRegular/font.woff2") format("woff2");
+  font-display: block;
 }
 
 :root {
