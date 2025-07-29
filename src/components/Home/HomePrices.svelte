@@ -1,4 +1,4 @@
-<script type="module">
+<script>
   import RegisterButton from "$components/Common/RegisterButton.svelte";
   import { Circle, Underline } from "$lib/annotate";
   import { headlineClasses, linkClasses, sectionClasses } from "$lib/styles";

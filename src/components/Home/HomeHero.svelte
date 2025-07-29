@@ -1,4 +1,4 @@
-<script type="module">
+<script>
   import { linkClasses, sectionClasses } from "$lib/styles";
   import { formatDate } from "$lib/utils";
   import data from "../../data.json";
