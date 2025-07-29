@@ -1,4 +1,4 @@
-<script type="module">
+<script>
   import data from "../../data.json";
   import { formatDate } from "$lib/utils";
   import { headlineClasses, sectionClasses } from "$lib/styles";
