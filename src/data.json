@@ -1,8 +1,8 @@
 {
-  "registrationOpen": true,
+  "registrationOpen": false,
   "dates": {
-    "CurrentStart": "2025-08-12",
-    "CurrentEnd": "2025-08-22"
+    "CurrentStart": "2026-08-13",
+    "CurrentEnd": "2026-08-23"
   },
   "prices": {
     "regular": 280,
