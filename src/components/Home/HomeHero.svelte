@@ -14,7 +14,7 @@
       <span use:Marker>Freizeit für Alle.</span>
     </h1>
 
-    <p class="text-md/realaxed md:text-2xl/relaxed font-bold text-balance">
+    <p class="text-md/relaxed md:text-2xl/relaxed font-bold text-balance">
       Das inklusive Sommer-Zeltlager für Alle.
       <span use:Underline>
         {formatDate(data.dates.CurrentStart)} - {formatDate(

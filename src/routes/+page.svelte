@@ -2,7 +2,7 @@
   import HomePrices from "$components/Home/HomePrices.svelte";
   import HomeHero from "$components/Home/HomeHero.svelte";
   import HomeSummary from "$components/Home/HomeSummary.svelte";
-  import HomeTeamAd from "$components//Home/HomeTeamAd.svelte";
+  import HomeTeamAd from "$components/Home/HomeTeamAd.svelte";
   import HomeSeo from "$components/Home/HomeSEO.svelte";
 </script>
 
@@ -12,6 +12,7 @@
     <a
       href="https://www.youtube.com/watch?v=fllxNphPCqw"
       target="_blank"
+      rel="noopener noreferrer"
       class="relative block group"
     >
       <div

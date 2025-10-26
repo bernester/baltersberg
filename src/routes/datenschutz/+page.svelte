@@ -70,7 +70,9 @@
       Verletzung. Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen
       Bereich) mit Anschrift finden Sie auf der <a
         href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html."
-        target="_blank">Liste von Kontaktdaten der Datenschutzbeauftragten</a
+        target="_blank"
+        rel="noopener noreferrer"
+        >Liste von Kontaktdaten der Datenschutzbeauftragten</a
       >
     </p>
   </section>

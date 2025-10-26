@@ -28,7 +28,7 @@
     <a
       href="https://allgaeu-oberschwaben.bdkj.info/"
       target="_blank"
-      rel="nofollow"
+      rel="nofollow noopener noreferrer"
       class={linkClasses}
     >
       Katholischen Jugendreferat Ravensburg

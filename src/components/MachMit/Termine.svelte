@@ -21,6 +21,7 @@
       <a
         href="https://www.google.com/calendar/render?action=TEMPLATE&text=Kick-Off+Wochenende&dates=20250523T150000Z/20250525T130000Z"
         target="_blank"
+        rel="noopener noreferrer"
         class={`${linkClasses} ${TermineSummaryClasses}`}
         >In den Kalender eintragen</a
       >
@@ -33,6 +34,7 @@
       <a
         href="https://www.google.com/calendar/render?action=TEMPLATE&text=Aufbau+und+Schulungen&dates=20250808T080000Z/20250811T180000Z"
         target="_blank"
+        rel="noopener noreferrer"
         class={`${linkClasses} ${TermineSummaryClasses}`}
         >In den Kalender eintragen</a
       >
@@ -45,6 +47,7 @@
       <a
         href="https://www.google.com/calendar/render?action=TEMPLATE&text=Freizeit+f%C3%BCr+Alle&dates=20250812T090000Z/20250822T090000Z"
         target="_blank"
+        rel="noopener noreferrer"
         class={`${linkClasses} ${TermineSummaryClasses}`}
         >In den Kalender eintragen</a
       >
@@ -57,6 +60,7 @@
       <a
         href="https://www.google.com/calendar/render?action=TEMPLATE&text=Abbau&dates=20250822T090000Z/20250823T160000Z"
         target="_blank"
+        rel="noopener noreferrer"
         class={`${linkClasses} ${TermineSummaryClasses}`}
         >In den Kalender eintragen</a
       >
