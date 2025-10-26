@@ -27,7 +27,7 @@ export function Underline(node: HTMLElement) {
     strokeWidth: 2,
     iterations: 4,
     padding: 0,
-    color: "var(--color-black)",
+    color: "var(--color-black-transparent)",
     multiline: true,
   };
 
@@ -42,7 +42,10 @@ export function Circle(
   const options = {
     type: "circle",
     strokeWidth: 4,
-    color: color === "green" ? "var(--color-green)" : "var(--color-yellow)",
+    color:
+      color === "green"
+        ? "var(--color-green-transparent)"
+        : "var(--color-yellow-transparent)",
     multiline: true,
   };
 
@@ -56,7 +59,10 @@ export function Marker(
 ) {
   const options = {
     type: "highlight",
-    color: color === "green" ? "var(--color-green)" : "var(--color-yellow)",
+    color:
+      color === "green"
+        ? "var(--color-green-transparent)"
+        : "var(--color-yellow-transparent)",
     multiline: true,
     iterations: 1,
   };

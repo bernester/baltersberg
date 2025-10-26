@@ -9,9 +9,12 @@
 }
 
 :root {
-  --color-yellow: theme("colors.yellow.transparent");
-  --color-green: theme("colors.green.transparent");
-  --color-black: theme("colors.black.transparent");
+  --color-yellow-transparent: theme("colors.yellow.transparent");
+  --color-green-transparent: theme("colors.green.transparent");
+  --color-black-transparent: theme("colors.black.transparent");
+  --color-yellow: theme("colors.yellow.DEFAULT");
+  --color-green: theme("colors.green.DEFAULT");
+  --color-black: theme("colors.black.DEFAULT");
 }
 
 body {

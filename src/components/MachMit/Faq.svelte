@@ -38,7 +38,8 @@
     Du hast noch weitere Fragen? Schreibe uns einfach an <a
       href="mailto:hallo@freizeitban.de"
       class={linkClasses}
-      target="_blank">hallo@freizeitban.de</a
+      target="_blank"
+      rel="noopener noreferrer">hallo@freizeitban.de</a
     >
   </p>
 </section>
