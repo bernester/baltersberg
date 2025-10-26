@@ -6,5 +6,5 @@
   href="https://tally.so/r/3EKKMN"
   class={primaryButtonClasses}
   rel="nofollow"
-  target="blank">Jetzt für 2025 anmelden</a
+  target="blank">Jetzt anmelden</a
 >

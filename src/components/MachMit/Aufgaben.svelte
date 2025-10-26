@@ -73,7 +73,7 @@
     </article>
     <article>
       <h3 class={`${subHeadlineClasses} mb-4 inline-block`}>
-        <span use:Marker={"green"}>Badeausicht </span>
+        <span use:Marker={"green"}>Badeaufsicht</span>
       </h3>
       <p class={ParagraphClasses}>
         Der Badesee ist ein besonders wichtiger Ort. Als Badeaufsicht sorgst du
