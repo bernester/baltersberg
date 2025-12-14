@@ -42,17 +42,18 @@
     <dl class="space-y-1">
       <dt class="font-bold text-base">Teilnehmende:</dt>
       <dd class="text-lg text-balance">
-        Wie haben Platz für <span class="font-bold" use:Marker
+        Wir haben Platz für <span class="font-bold" use:Marker
           >32 Kinder und Jugendliche</span
         >
       </dd>
     </dl>
     <dl class="space-y-1">
-      <dt class="font-bold text-base">Alter:</dt>
+      <dt class="font-bold text-base">Alterspanne:</dt>
       <dd class="text-lg text-balance">
-        Du sollest zwischen <span class="font-bold" use:Marker
-          >10 bis 15 Jahre alt</span
-        > sein.
+        Das Zeltlager ist für Kinder und Jugendliche zwischen <span
+          class="font-bold"
+          use:Marker>9 bis 14 Jahre alt</span
+        > ausgelegt.
       </dd>
     </dl>
   </div>
