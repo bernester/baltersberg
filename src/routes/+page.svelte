@@ -4,6 +4,7 @@
   import HomeSummary from "$components/Home/HomeSummary.svelte";
   import HomeTeamAd from "$components/Home/HomeTeamAd.svelte";
   import HomeSeo from "$components/Home/HomeSEO.svelte";
+  import HomeFaq from "$components/Home/HomeFaq.svelte";
 </script>
 
 <div class="space-y-20">
@@ -39,6 +40,7 @@
   </section>
   <HomePrices />
   <HomeSummary />
+  <HomeFaq />
   <HomeSeo />
   <HomeTeamAd />
 </div>
