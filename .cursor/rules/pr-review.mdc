@@ -1,0 +1,93 @@
+---
+description: Senior developer pre-PR self-review checklist focused on readability, modularity, and maintainability for this React + TypeScript + Tailwind (Radix UI) codebase
+alwaysApply: false
+---
+
+## Pragmatic Pre‑PR Self Review (Author)
+
+Use this checklist before opening a PR to catch issues reviewers will flag. Optimized for our stack: React, TypeScript, Tailwind v4, Radix UI, Vite, React Router.
+
+### How to self‑review before opening a PR
+- Confirm scope is focused; if large, split by feature/layer.
+- Sync with the base branch and ensure a clean local build.
+- Run type‑checks, lints, unit tests, relevant integration tests, and the Vite build.
+- Run the app, verify affected flows, and capture before/after screenshots if UI changes.
+- Write a clear PR description (see template below).
+- Self‑review your diff top‑down and add clarifying comments where intent may be unclear.
+- Ensure commits are logical and messages are descriptive.
+
+### Core checklist
+
+1) Readability & Naming
+- Prefer clear, descriptive names over abbreviations; make long expressions readable with well‑named variables.
+- Remove dead code, commented blocks, stray logs, and TODOs. Explain "why" with brief comments when intent is non‑obvious.
+- Keep nesting shallow (max ~2–3 levels); use guard clauses and early returns.
+
+2) Modularity & Architecture
+- Single responsibility per file/module; extract helpers to `src/utils/` and shared UI to `src/components/shared/ui/`.
+- Reuse existing hooks/components before adding new ones; avoid duplication.
+- Place files according to project structure; new UI in kebab‑case directories. Do not introduce Material UI/styled‑components in the new product.
+
+3) React + TypeScript correctness
+- Functional components with `const` arrow fns; event handlers use `handle*` prefix.
+- Strongly type public APIs and component props; avoid `any`. Prefer `type` aliases; avoid enums (use maps).
+- Validate hook correctness: dependency arrays complete, no stale closures, minimal memoization used only for actual render hotspots.
+- State and effects: prefer derived values over redundant state; keep side‑effects isolated.
+
+4) UI/UX & Accessibility
+- Use Tailwind v4 utilities and our tokens: e.g., `rounded-circle`, `text-gray`, `bg-base-*-soft`/`-solid`/`-skeleton`.
+- Use Radix UI primitives/components; use `cn()` for conditional classes. Avoid inline styles.
+- Ensure semantic HTML, keyboard navigation, focus management, ARIA where needed, and alt text for images.
+- Mobile‑first responsive layout; verify small screens.
+
+5) Error handling & Security
+- Validate and sanitize inputs; display user‑friendly errors and empty states. Do not swallow errors.
+- Avoid `dangerouslySetInnerHTML`; if unavoidable, sanitize and document why.
+- Respect authentication/authorization boundaries; avoid leaking PII in logs or analytics.
+
+6) Tests & Performance (right‑sized)
+- Add/adjust unit tests near the changed files; integration tests in `integration-tests/` for flows. Cover critical paths and edge cases.
+- Ensure type‑check, lint, and Vite build succeed; no dev‑only imports in production code.
+- Performance: avoid unnecessary re‑renders; keep heavy work out of render paths; deduplicate network calls; consider virtualization for large lists.
+
+### PR preparation (author)
+- PR description includes context, motivation, screenshots (before/after), rollout plan, and potential risks.
+- Small, focused commits with descriptive messages. Call out breaking changes and migration steps.
+
+### PR description template (author)
+Copy/paste and fill before opening the PR.
+
+```
+Title: <concise summary>
+
+Context
+- Problem / motivation:
+- Related links / tickets:
+
+What changed
+- High‑level summary of changes:
+
+Screenshots (if UI)
+- Before:
+- After:
+
+Risk & rollout
+- Overall risk: Low | Medium | High
+- Rollout plan / flags / migrations:
+
+Testing
+- Unit tests updated/added:
+- Integration/E2E (if applicable):
+- Manual steps to verify:
+
+Checklist
+- [ ] Type‑check, lint, and build passing
+- [ ] Tests updated/added
+- [ ] Docs/translations updated (if needed)
+```
+
+### Quick reminders (for this repo)
+- Follow folder conventions (`src/components/`, `src/hooks/`, `src/utils/`, `src/routes/`, `src/i18n/`). New code uses kebab‑case.
+- Prefer extracting reusable bits into shared UI (`src/components/shared/ui`) and helpers into `src/utils`.
+- Match our code style: descriptive names, early returns, minimal nesting, no enums, no inline styles.
+

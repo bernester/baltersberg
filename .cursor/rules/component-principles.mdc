@@ -1,0 +1,238 @@
+# Component Design Principles for volt-ui
+
+Based on [components.build Core Principles](https://www.components.build/principles), these guidelines ensure our UI components are production-ready, accessible, and maintainable.
+
+## 1. Composability and Reusability
+
+**Favor composition over inheritance** – Build components that can be combined and nested to create complex UIs.
+
+### Guidelines:
+- ✅ **Compound Components Pattern**: Use React's compositional pattern (e.g., `Dialog.Root`, `Dialog.Content`, `Dialog.Title`)
+- ✅ **Clear Props API**: Expose well-typed props that allow customization without breaking encapsulation
+- ✅ **Slots and Children**: Use `children` prop and `asChild` pattern (via Radix Slot) for maximum flexibility
+- ✅ **Minimal Assumptions**: Don't assume specific use cases; let consumers compose behavior
+
+### Examples in volt-ui:
+```tsx
+// ✅ Good: Composable Dialog
+<Dialog.Root>
+  <Dialog.Trigger asChild>
+    <Button>Open</Button>
+  </Dialog.Trigger>
+  <Dialog.Content>
+    <Dialog.Title>Title</Dialog.Title>
+    <Dialog.Description>Content</Dialog.Description>
+  </Dialog.Content>
+</Dialog.Root>
+
+// ❌ Bad: Monolithic component with too many props
+<Dialog 
+  title="Title" 
+  content="Content" 
+  trigger={<Button>Open</Button>}
+  onSubmit={...}
+  footer={...}
+/>
+```
+
+## 2. Accessible by Default
+
+**Components must be usable by all users** – Accessibility is a baseline feature, not optional.
+
+### Requirements:
+- ✅ **Semantic HTML**: Use appropriate elements (`<button>`, `<label>`, `<ul>`, etc.)
+- ✅ **Keyboard Navigation**: Full keyboard support (Tab, Arrow keys, Enter, Escape)
+- ✅ **Focus Management**: Proper focus trapping in modals, focus restoration on close
+- ✅ **ARIA Attributes**: Include necessary `role`, `aria-*` attributes when semantic HTML isn't enough
+- ✅ **Screen Reader Support**: Test with VoiceOver/NVDA; add `sr-only` helpers where needed
+- ✅ **Color Contrast**: Ensure WCAG AA compliance (use Radix Colors semantic tokens)
+
+### In volt-ui:
+- Leverage Radix UI primitives (they handle ARIA/keyboard/focus by default)
+- Add explicit `aria-label` when visual labels aren't present
+- Use `className="sr-only"` for screen-reader-only content
+- Test every component with keyboard-only navigation
+
+### Example:
+```tsx
+// ✅ Screen reader support
+<button className="..." aria-label="Close dialog">
+  <CloseIcon aria-hidden="true" />
+  <span className="sr-only">Close</span>
+</button>
+```
+
+## 3. Customizability and Theming
+
+**Components should be easy to restyle** – Avoid hard-coded styles that cannot be overridden.
+
+### Guidelines:
+- ✅ **CSS Variables**: Use Tailwind CSS v4 theme tokens and CSS custom properties
+- ✅ **className Prop**: Always accept and merge custom `className` (use `cx()` from classnames)
+- ✅ **Design Tokens**: Leverage Radix Colors and semantic color tokens (e.g., `bg-gray-level-1`, `text-accent-default`)
+- ✅ **Tailwind Utilities**: Prefer Tailwind classes over inline styles or CSS-in-JS
+- ✅ **Scoped Styling**: Support `data-volt` scoping for micro-frontend isolation
+
+### Color System:
+```tsx
+// ✅ Use semantic tokens (adapts to light/dark mode)
+className="bg-gray-level-1 text-gray-default border-gray-default"
+
+// ❌ Avoid hard-coded colors
+style={{ backgroundColor: '#f0f0f0', color: '#333' }}
+```
+
+### Variant Pattern:
+```tsx
+// Use class-variance-authority for complex variants
+import { cva } from "class-variance-authority";
+
+const buttonVariants = cva(
+  "rounded-md font-normal transition-colors",
+  {
+    variants: {
+      variant: {
+        primary: "bg-accent-solid text-accent-contrast",
+        secondary: "bg-gray-soft text-gray-default",
+      },
+      size: {
+        sm: "px-3 py-1.5 text-sm",
+        md: "px-4 py-2 text-base",
+      },
+    },
+  }
+);
+```
+
+## 4. Lightweight and Performant
+
+**Keep components lean** – Minimize dependencies and optimize rendering.
+
+### Guidelines:
+- ✅ **Tree-shakeable**: Export components individually (e.g., `import { Button } from "@epilot/volt-ui"`)
+- ✅ **Zero Runtime CSS**: CSS extracted at build time (no runtime injection)
+- ✅ **Minimal Dependencies**: Only use Radix UI primitives and classnames/cva
+- ✅ **Avoid Re-renders**: Use `React.memo()`, `useMemo()`, `useCallback()` when appropriate
+- ✅ **Code Splitting**: Keep icons and large assets separately importable
+
+### Performance Checklist:
+- [ ] Component exports are granular (not barrel exports from heavy modules)
+- [ ] CSS is pre-compiled (not generated at runtime)
+- [ ] Event handlers don't create new functions on every render
+- [ ] Large lists use virtualization (not included by default, but recommended)
+
+## 5. Transparency and Code Ownership
+
+**Embrace open-source transparency** – Developers should understand and modify component code.
+
+### Guidelines:
+- ✅ **Readable Code**: Write clear, self-documenting code with meaningful variable names
+- ✅ **Source Maps**: Build includes source maps for debugging
+- ✅ **TypeScript Types**: Export all types for full IntelliSense support
+- ✅ **Copy-Paste Friendly**: Components should be understandable enough to copy into projects
+- ✅ **No Black Boxes**: Avoid complex abstractions; prefer explicit, traceable logic
+
+### Code Quality Standards:
+```tsx
+// ✅ Clear, descriptive naming
+const [isOpen, setIsOpen] = useState(false);
+const handleOpenChange = (open: boolean) => setIsOpen(open);
+
+// ❌ Cryptic or generic naming
+const [state, setState] = useState(false);
+const handler = (x: boolean) => setState(x);
+```
+
+## 6. Well-documented and DX-Friendly
+
+**Great DX starts with great documentation** – Make it easy to learn and integrate.
+
+### Documentation Requirements:
+- ✅ **Storybook Stories**: Every component has interactive examples
+- ✅ **Props Documentation**: TypeScript types + JSDoc comments
+- ✅ **Usage Examples**: Show common patterns and edge cases
+- ✅ **Accessibility Notes**: Document keyboard shortcuts, ARIA usage
+- ✅ **Migration Guides**: Help users upgrade between versions
+
+### Example Component Documentation:
+```tsx
+export type ButtonProps = {
+  /** Visual style variant */
+  variant?: "primary" | "secondary" | "ghost";
+  
+  /** Size of the button */
+  size?: "sm" | "md" | "lg";
+  
+  /** If true, button takes full width of container */
+  fullWidth?: boolean;
+  
+  /** 
+   * Renders as a different element while preserving button behavior.
+   * Useful for rendering as a Link component.
+   */
+  asChild?: boolean;
+} & ComponentPropsWithoutRef<"button">;
+
+/**
+ * Button component for user actions.
+ * 
+ * @example
+ * ```tsx
+ * <Button variant="primary" onClick={handleClick}>
+ *   Click me
+ * </Button>
+ * ```
+ * 
+ * @example With asChild for Next.js Link
+ * ```tsx
+ * <Button asChild>
+ *   <Link href="/dashboard">Go to Dashboard</Link>
+ * </Button>
+ * ```
+ */
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(...)
+```
+
+## Additional volt-ui Specific Principles
+
+### Portal Support for Scoped CSS
+- All portal-based components (Dialog, Popover, DropdownMenu, Tooltip, SelectInput) must add `data-volt-portal` attribute
+- This ensures scoped styles work even when content is rendered outside the main `data-volt` container
+
+### File Structure
+- One component per file (e.g., `Button.tsx`, `IconButton.tsx`)
+- Co-locate tests with components (e.g., `Button.test.tsx`)
+- Export compound components as namespace objects (e.g., `Dialog.Root`, `Dialog.Content`)
+
+### Naming Conventions
+- Use `handle` prefix for event handlers (`handleClick`, `handleKeyDown`)
+- Use descriptive boolean names with auxiliary verbs (`isLoading`, `hasError`, `canSubmit`)
+- Follow kebab-case for directories (`src/components/dropdown-menu/`)
+- Follow PascalCase for component files (`DropdownMenu.tsx`)
+
+### TypeScript Standards
+- Prefer `type` over `interface`
+- Use `ComponentPropsWithoutRef` for HTML element props
+- Export all component prop types
+- Avoid `any`; use `unknown` when type is truly unknown
+
+## Checklist for New Components
+
+Before submitting a new component, ensure:
+
+- [ ] **Composable**: Uses compound pattern or clear slot-based API
+- [ ] **Accessible**: Keyboard nav, ARIA, semantic HTML, screen reader tested
+- [ ] **Themeable**: Uses design tokens, accepts `className`, no hard-coded colors
+- [ ] **Lightweight**: Minimal dependencies, tree-shakeable exports
+- [ ] **Transparent**: Readable code, TypeScript types exported
+- [ ] **Documented**: Storybook story, JSDoc comments, usage examples
+- [ ] **Tested**: Unit tests for behavior, visual regression in Storybook
+- [ ] **Scoped**: Portal components use `data-volt-portal` attribute
+
+## References
+
+- [components.build Core Principles](https://www.components.build/principles)
+- [React Composition Docs](https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children)
+- [Radix UI Accessibility](https://www.radix-ui.com/primitives/docs/overview/accessibility)
+- [Tailwind CSS v4 Documentation](https://tailwindcss.com/docs)
+- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)

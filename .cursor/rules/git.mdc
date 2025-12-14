@@ -1,0 +1,42 @@
+---
+description: Use this to generate git commit messages
+globs: 
+alwaysApply: false
+---
+# Git Commit Rules
+
+## Commit Message Format
+All commit messages MUST follow this format:
+```
+<type>: <description>
+```
+
+## Types
+- `feat`: A new feature implementation
+- `fix`: A bug fix
+- `test`: Adding or modifying tests
+- `add`: Adding new functionality that doesn't qualify as a feature
+- `refactor`: Code changes that neither fix a bug nor add a feature
+- `docs`: Documentation only changes
+- `chore`: Changes to build process, auxiliary tools, libraries, etc.
+
+## Rules
+1. Use the imperative mood in the description ("add" not "added" or "adds")
+2. Don't capitalize the first letter of the description
+3. No period (.) at the end of the description
+4. Keep the description concise and clear
+5. Use lowercase for the type
+6. Always include a space after the colon
+7. If addressing a specific component/area, mention it in the description (e.g., "fix: handle status filtering for opps")
+
+## Examples
+```
+feat: add user authentication system
+fix: resolve data loading issue in dashboard
+test: add unit tests for price-utils functions
+add: implement tiered pricing logic
+refactor: optimize database queries
+docs: update API documentation
+style: format according to style guide
+chore: update dependencies
+```
