@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         lexend: ["Lexend", "sans-serif"],
-        bolle: ["Bolle", "sans-serif"],
+        bolle: ["Bolle", "Comic Sans MS", "cursive", "sans-serif"],
       },
       colors: {
         black: {
