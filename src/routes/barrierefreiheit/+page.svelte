@@ -28,4 +28,3 @@
     @apply not-italic;
   }
 </style>
-

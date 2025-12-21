@@ -22,7 +22,7 @@
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="w-20 h-20 text-black bg-white group-hover:bg-opacity-90 transition duration-200 rounded-full p-4"
+          class="w-20 h-20 text-yellow bg-black group-hover:bg-opacity-90 transition duration-200 rounded-full p-4"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
@@ -30,27 +30,48 @@
         </svg>
       </div>
 
-      <picture>
-        <source
-          type="image/webp"
-          srcset="videothumbnail-640w.webp 640w, videothumbnail-1024w.webp 1024w, videothumbnail-1280w.webp 1280w"
-          sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1280px"
-        />
-        <img
-          src="videothumbnail-gross.jpg"
-          width="1280"
-          height="853"
-          loading="eager"
-          class="w-full max-w-4xl mx-auto transform transition-transform duration-200 group-hover:scale-105"
-          alt="Die Freizeitbande sitzt um das Lagerfeuer herum und singt"
-        />
-      </picture>
+      <img
+        src="campfire.svg"
+        width="1280"
+        height="853"
+        loading="eager"
+        class="w-full max-w-4xl mx-auto transform transition-transform duration-200 group-hover:scale-105"
+        alt="Die Freizeitbande sitzt um das Lagerfeuer herum und singt"
+        draggable="false"
+      />
       <span class="sr-only">Youtube Video von der Freizeitbande</span>
     </a>
   </section>
   <HomePrices />
   <HomeSummary />
-  <HomeFaq />
+  <section class="flex justify-center">
+    <img
+      src="joy-skipping.svg"
+      alt="Zwei Kinder hüpfen fröhlich über einer Wiese"
+      class="w-[480px] max-w-full my-8"
+      loading="lazy"
+      draggable="false"
+    />
+  </section>
   <HomeSeo />
+  <HomeFaq />
+  <section class="flex justify-center">
+    <img
+      src="marshmallow.svg"
+      alt="Marshmallow sitzt auf einem Lagerfeuer"
+      class="w-[480px] max-w-full my-8"
+      loading="lazy"
+      draggable="false"
+    />
+  </section>
   <HomeTeamAd />
+  <section class="flex justify-center">
+    <img
+      src="happy-chores.svg"
+      alt="Kinder haben Spaßbeim Spüldienst"
+      class="w-[480px] max-w-full my-8"
+      loading="lazy"
+      draggable="false"
+    />
+  </section>
 </div>
