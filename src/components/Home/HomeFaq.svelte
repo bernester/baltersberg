@@ -25,7 +25,7 @@
       mit all seinen Spielen, Aktionen und Erlebnissen am besten genießen.
     </p>
     <p class={AnswerClasses}>
-      Wir mache aber Ausnahmen. Zum Bespiel wenn bereits ein Geschwisterkind
+      Wir machen aber Ausnahmen. Zum Beispiel, wenn bereits ein Geschwisterkind
       teilnimmt oder ein persönlicher Bezug zum Zeltlager besteht, können
       Ausnahmen gern individuell besprochen werden. Sprecht uns einfach an –
       gemeinsam finden wir eine gute Lösung!
