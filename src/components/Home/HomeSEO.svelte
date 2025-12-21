@@ -11,7 +11,7 @@
   </h2>
   <p class="text-lg/relaxed text-pretty mb-4">
     Die Freizeit für Alle ist ein inklusives Zeltlager für Kinder und
-    Jugendliche zwischen 10 und 15 Jahren.
+    Jugendliche zwischen 9 und 14 Jahren.
   </p>
   <p class="text-lg/relaxed text-pretty mb-8">
     Bei uns sind <span use:Underline>alle herzlich willkommen,</span> unabhängig
