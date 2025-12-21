@@ -50,10 +50,9 @@
     <dl class="space-y-1">
       <dt class="font-bold text-base">Alterspanne:</dt>
       <dd class="text-lg text-balance">
-        Das Zeltlager ist für Kinder und Jugendliche zwischen <span
-          class="font-bold"
-          use:Marker>9 bis 14 Jahre alt</span
-        > ausgelegt.
+        Das Zeltlager ist besonders <span class="font-bold" use:Marker
+          >für 9- bis 14-Jährige</span
+        > geeignet.
       </dd>
     </dl>
   </div>
