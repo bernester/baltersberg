@@ -20,9 +20,14 @@ export default {
           light: "oklch(100% 0.14 112)",
         },
         green: {
-          DEFAULT: "oklch(85% 0.26 151)",
-          transparent: "oklch(85% 0.26 151 / .8)",
-          light: "oklch(85% 0.20 151)",
+          DEFAULT: "oklch(1 0.22 160)",
+          transparent: "oklch(1 0.22 160 / .8)",
+          light: "oklch(1 0.14 160)",
+        },
+        pink: {
+          DEFAULT: "oklch(0.75 0.21 360)",
+          transparent: "oklch(0.75 0.21 360 / .8)",
+          light: "oklch(0.75 0.13 360)",
         },
       },
     },
