@@ -1,8 +1,22 @@
 {
   "registrationOpen": true,
   "dates": {
-    "CurrentStart": "2026-08-13",
-    "CurrentEnd": "2026-08-23"
+    "camp": {
+      "start": "2026-08-13",
+      "end": "2026-08-23"
+    },
+    "vbt": {
+      "start": "2026-06-12T17:00:00",
+      "end": "2026-06-14T15:00:00"
+    },
+    "aufbau": {
+      "start": "2026-08-11",
+      "end": "2026-08-13"
+    },
+    "abbau": {
+      "start": "2026-08-23",
+      "end": "2026-08-24"
+    }
   },
   "prices": {
     "regular": 280,

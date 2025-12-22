@@ -20,7 +20,7 @@
       <dt class="font-bold text-base">Anreise:</dt>
       <dd class="text-lg text-balance">
         Am <span class="font-bold" use:Marker
-          >{formatDate(data.dates.CurrentStart)}
+          >{formatDate(data.dates.camp.start)}
           ab 11 Uhr</span
         > könnt ihr anreisen.
       </dd>
@@ -29,7 +29,7 @@
       <dt class="font-bold text-base">Abreise:</dt>
       <dd class="text-lg text-balance">
         Die Abreise beginnt <span class="font-bold" use:Marker
-          >{formatDate(data.dates.CurrentEnd)} ab 11 Uhr</span
+          >{formatDate(data.dates.camp.end)} ab 11 Uhr</span
         >
       </dd>
     </dl>
