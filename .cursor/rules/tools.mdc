@@ -1,0 +1,32 @@
+---
+description: Tools and Package Management
+globs: 
+alwaysApply: false
+---
+# Tools and Package Management
+
+## Package Manager
+- **Use `yarn` instead of `npm`** for all package management operations
+- This project uses yarn for installing dependencies, running scripts, and building the application
+- Always use `yarn` commands instead of `npm` commands
+
+### Examples:
+- `yarn install` instead of `npm install`
+- `yarn add <package>` instead of `npm install <package>`
+- `yarn run lint` instead of `npm run lint`
+- `yarn dev` instead of `npm run dev`
+- `yarn build` instead of `npm run build`
+
+## Development Tools
+- **Vite** is used as the bundler for this project
+- **TypeScript** is used for type safety
+- **ESLint** is used for code linting
+- **Tailwind CSS** is used for styling
+- **Radix UI** components are used for UI elements
+
+## Build and Development Commands
+- `yarn dev` - Start development server
+- `yarn build` - Build for production
+- `yarn lint` - Run ESLint and TypeScript checks
+- `yarn test` - Run tests
+- `yarn preview` - Preview production build locally

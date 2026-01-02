@@ -20,7 +20,7 @@
       <dt class="font-bold text-base">Anreise:</dt>
       <dd class="text-lg text-balance">
         Am <span class="font-bold" use:Marker
-          >{formatDate(data.dates.CurrentStart)}
+          >{formatDate(data.dates.camp.start)}
           ab 11 Uhr</span
         > könnt ihr anreisen.
       </dd>
@@ -29,7 +29,7 @@
       <dt class="font-bold text-base">Abreise:</dt>
       <dd class="text-lg text-balance">
         Die Abreise beginnt <span class="font-bold" use:Marker
-          >{formatDate(data.dates.CurrentEnd)} ab 11 Uhr</span
+          >{formatDate(data.dates.camp.end)} ab 11 Uhr</span
         >
       </dd>
     </dl>
@@ -42,17 +42,17 @@
     <dl class="space-y-1">
       <dt class="font-bold text-base">Teilnehmende:</dt>
       <dd class="text-lg text-balance">
-        Wie haben Platz für <span class="font-bold" use:Marker
+        Wir haben Platz für <span class="font-bold" use:Marker
           >32 Kinder und Jugendliche</span
         >
       </dd>
     </dl>
     <dl class="space-y-1">
-      <dt class="font-bold text-base">Alter:</dt>
+      <dt class="font-bold text-base">Alterspanne:</dt>
       <dd class="text-lg text-balance">
-        Du sollest zwischen <span class="font-bold" use:Marker
-          >10 bis 15 Jahre alt</span
-        > sein.
+        Das Zeltlager ist besonders <span class="font-bold" use:Marker
+          >für 9- bis 14-Jährige</span
+        > geeignet.
       </dd>
     </dl>
   </div>

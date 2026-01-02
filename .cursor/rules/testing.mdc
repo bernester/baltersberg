@@ -1,0 +1,25 @@
+---
+description: "Guidelines for Vitest + React Testing Library suites"
+globs: *.test.tsx,*.test.ts
+alwaysApply: true
+---
+
+# Testing Guidelines
+
+## Tooling
+
+- Prefer Vitest as the runner and invoke suites with `bun run test` (or `bun run test --filter <name>`).
+- Use React Testing Library helpers (`render`, `screen`, `user-event`) for DOM interactions.
+- Mock timers, refs, and other dependencies with `vi`, and reset mocks between tests to keep suites deterministic.
+
+## Structure
+
+- Collocate tests next to the component/hook and use kebab-case names (`button.test.tsx`).
+- Wrap scenarios with `describe` and use descriptive `it` blocks (`it("forwards the ref")`).
+- Rely on accessible queries (`getByRole`, `getByLabelText`, etc.) before asserting props or attributes.
+- Validate behavior (variants, ref forwarding, asChild rendering, native attributes) over CSS class snapshots.
+
+## Hygiene
+
+- Keep tests focused, avoid snapshots unless they add clear value, and document helpers or fixtures.
+- Exercise button types (`button`, `submit`, `reset`) and variants in separate scenarios to ensure coverage.

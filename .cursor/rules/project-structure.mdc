@@ -1,0 +1,31 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Structure
+
+This is project structure of this web application
+
+## Main Structure
+- We use Vite bundler with yarn to run the local server and building the product
+- Main app is in `src/`
+- React components are in `src/components/` folder
+- Reusable react contexts are in `src/context/` folder
+- Hooks are in `src/hooks/` folder
+- Utils are in `src/utils/` folder
+- We use React router dom for client side routing and its routes are in `src/routes/` folder
+- API clients are in `src/api/` folder
+- Translation files are in `src/i18n/` folder
+  - Currently we support english, german translations
+- Unit tests are part of same directory for component or utils, etc file
+- Integration tests are in the `integration-tests/` folder
+
+
+## Old codes
+- We support two version of our product
+- Old product uses material UI and styled components but we no loader develop anything for it. Its just in support mode. 
+  - Code is in same folder and all files are mostly in PascelCase
+- New product uses tailwind, radix colors, radix components
+  - re-useable dumb UI compoents are in `src/components/shared/ui` folder.
+  - we follow kabab case for folder and file names

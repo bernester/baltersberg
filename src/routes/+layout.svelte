@@ -38,5 +38,7 @@
     <a href="/impressum" class={linkClasses}>Impressum</a>
     <span class="mx-2">•</span>
     <a href="/datenschutz" class={linkClasses}>Datenschutzerklärung</a>
+    <span class="mx-2">•</span>
+    <a href="/barrierefreiheit" class={linkClasses}>Barrierefreiheit</a>
   </p>
 </footer>
