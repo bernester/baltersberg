@@ -14,7 +14,6 @@
     "@sveltejs/adapter-vercel": "^5.4.4",
     "@sveltejs/kit": "^2.5.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
-    "@types/node": "^25.0.2",
     "autoprefixer": "^10.4.19",
     "marked": "^17.0.1",
     "postcss": "^8.4.40",
