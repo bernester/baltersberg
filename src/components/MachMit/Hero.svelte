@@ -18,15 +18,16 @@
     <a
       href="https://tally.so/r/nrAk42"
       class={`${primaryButtonClasses} !text-green-light`}
-      rel="nofollow"
-      target="blank">Werde Teil des Teams</a
+      rel="nofollow noopener noreferrer"
+      target="_blank"
+      aria-label="Werde Teil des Teams (öffnet in neuem Tab)"
+      >Werde Teil des Teams</a
     >
 
     <a
-      href="mehr-erfahren"
+      href="#faq"
       use:scrollTo={"faq"}
-      class={`${linkClasses}`}
-      rel="presentation">Häufige Fragen</a
+      class={`${linkClasses}`}>Häufige Fragen</a
     >
   </div>
   <p class="text-md/relaxed md:text-lg/relaxed text-center text-pretty mb-8">

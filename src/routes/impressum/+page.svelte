@@ -4,6 +4,10 @@
   export let data: PageData;
 </script>
 
+<svelte:head>
+  <title>Impressum – Freizeit für Alle</title>
+</svelte:head>
+
 <div class="max-w-(--breakpoint-sm) mx-auto py-8 mb-8 prose prose-sm">
   {@html data.content}
 </div>

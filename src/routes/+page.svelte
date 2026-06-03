@@ -15,38 +15,37 @@
       target="_blank"
       rel="noopener noreferrer"
       class="relative block group"
+      aria-label="Youtube Video von der Freizeitbande (öffnet in neuem Tab)"
     >
-      <div
-        class="absolute inset-0 flex items-center justify-center z-10"
-        role="presentation"
-      >
+      <div class="absolute inset-0 flex items-center justify-center z-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="w-20 h-20 text-yellow bg-black group-hover:bg-black/90 transition duration-200 rounded-full p-4"
+          class="w-20 h-20 text-yellow bg-black motion-safe:group-hover:bg-black/90 motion-safe:transition motion-safe:duration-200 rounded-full p-4"
           viewBox="0 0 24 24"
           fill="currentColor"
+          aria-hidden="true"
+          focusable="false"
         >
           <path d="M8 5v14l11-7z" />
         </svg>
       </div>
 
       <img
-        src="campfire.svg"
+        src="/campfire.svg"
         width="1280"
         height="853"
         loading="eager"
-        class="w-full max-w-4xl mx-auto transform transition-transform duration-200 group-hover:scale-105"
-        alt="Die Freizeitbande sitzt um das Lagerfeuer herum und singt"
+        class="w-full max-w-4xl mx-auto motion-safe:transform motion-safe:transition-transform motion-safe:duration-200 motion-safe:group-hover:scale-105"
+        alt=""
         draggable="false"
       />
-      <span class="sr-only">Youtube Video von der Freizeitbande</span>
     </a>
   </section>
   <HomePrices />
   <HomeSummary />
   <section class="flex justify-center">
     <img
-      src="joy-skipping.svg"
+      src="/joy-skipping.svg"
       alt="Zwei Kinder hüpfen fröhlich über einer Wiese"
       class="w-[480px] max-w-full my-8"
       loading="lazy"
@@ -57,7 +56,7 @@
   <HomeFaq />
   <section class="flex justify-center">
     <img
-      src="marshmallow.svg"
+      src="/marshmallow.svg"
       alt="Marshmallow sitzt auf einem Lagerfeuer"
       class="w-[480px] max-w-full my-8"
       loading="lazy"
@@ -67,8 +66,8 @@
   <HomeTeamAd />
   <section class="flex justify-center">
     <img
-      src="happy-chores.svg"
-      alt="Kinder haben Spaßbeim Spüldienst"
+      src="/happy-chores.svg"
+      alt="Kinder haben Spaß beim Spüldienst"
       class="w-[480px] max-w-full my-8"
       loading="lazy"
       draggable="false"

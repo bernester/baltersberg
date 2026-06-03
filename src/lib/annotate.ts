@@ -1,11 +1,21 @@
 import { annotate } from "rough-notation";
 import { onMount } from "svelte";
 
+function prefersReducedMotion(): boolean {
+  if (typeof window === "undefined" || !window.matchMedia) return false;
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
 function applyAnnotation(node: HTMLElement, options: any) {
   const annotation = annotate(node, options);
-  setTimeout(() => {
+  if (prefersReducedMotion()) {
+    // Render the annotation instantly, with no draw animation
     annotation.show();
-  }, 200);
+  } else {
+    setTimeout(() => {
+      annotation.show();
+    }, 200);
+  }
 }
 
 function createObserver(node: HTMLElement, options: any) {
@@ -29,6 +39,7 @@ export function Underline(node: HTMLElement) {
     padding: 0,
     color: "var(--color-black-transparent)",
     multiline: true,
+    animate: !prefersReducedMotion(),
   };
 
   onMount(() => createObserver(node, options));
@@ -47,6 +58,7 @@ export function Circle(
         ? "var(--color-green-transparent)"
         : "var(--color-yellow-transparent)",
     multiline: true,
+    animate: !prefersReducedMotion(),
   };
 
   onMount(() => createObserver(node, options));
@@ -65,6 +77,7 @@ export function Marker(
         : "var(--color-yellow-transparent)",
     multiline: true,
     iterations: 1,
+    animate: !prefersReducedMotion(),
   };
 
   onMount(() => createObserver(node, options));

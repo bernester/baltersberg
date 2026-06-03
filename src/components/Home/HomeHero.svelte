@@ -24,10 +24,9 @@
     {#if data.registrationOpen}
       <RegisterButton />
       <a
-        href="mehr-erfahren"
+        href="#mehr"
         use:scrollTo={"mehr"}
-        class={`${linkClasses}`}
-        rel="presentation">Mehr erfahren</a
+        class={`${linkClasses}`}>Mehr erfahren</a
       >
     {/if}
   </div>

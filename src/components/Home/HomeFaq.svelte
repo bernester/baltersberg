@@ -37,9 +37,7 @@
   <p class="text-xl font-bold mb-4 text-center">
     Noch Fragen? Schreibt uns an <a
       href="mailto:hallo@freizeitban.de"
-      class={linkClasses}
-      target="_blank"
-      rel="noopener noreferrer">hallo@freizeitban.de</a
+      class={linkClasses}>hallo@freizeitban.de</a
     >
   </p>
 </section>

@@ -4,6 +4,8 @@
   viewBox="0 0 800 800"
   width="80"
   height="80"
+  aria-hidden="true"
+  focusable="false"
 >
   <g fill="var(--color-black)">
     <path

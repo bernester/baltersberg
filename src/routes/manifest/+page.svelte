@@ -13,6 +13,10 @@
     "text-md/relaxed md:text-lg/relaxed text-pretty mb-4 mb-4";
 </script>
 
+<svelte:head>
+  <title>Manifest – Freizeit für Alle</title>
+</svelte:head>
+
 <section class={`${sectionClasses.default}`}>
   <div class="section-content p-8">
     <h1 class="text-4xl/tight md:text-7xl/tight font-bolle uppercase mb-6">

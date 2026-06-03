@@ -5,6 +5,10 @@
   import Termine from "$components/MachMit/Termine.svelte";
 </script>
 
+<svelte:head>
+  <title>Mach mit – Freizeit für Alle</title>
+</svelte:head>
+
 <div class="space-y-20">
   <Hero />
   <Aufgaben />

@@ -5,6 +5,7 @@
 <a
   href="https://tally.so/r/3EKKMN"
   class={primaryButtonClasses}
-  rel="nofollow"
-  target="blank">Jetzt anmelden</a
+  rel="nofollow noopener noreferrer"
+  target="_blank"
+  aria-label="Jetzt anmelden (öffnet in neuem Tab)">Jetzt anmelden</a
 >

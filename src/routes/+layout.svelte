@@ -10,12 +10,18 @@
 <svelte:head>
   <title>Freizeit für Alle. Das inklusive Sommerzeltlager in Allgäu</title>
 </svelte:head>
+<a
+  href="#main"
+  class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-yellow focus:text-black focus:font-bold focus:rounded"
+>
+  Zum Hauptinhalt springen
+</a>
 <header class="p-8 flex justify-center">
   <a href="/" aria-label="Zur Startseite">
     <Logo />
   </a>
 </header>
-<main class="w-full text-black">
+<main id="main" class="w-full text-black">
   <slot />
 </main>
 
@@ -30,6 +36,7 @@
       target="_blank"
       rel="nofollow noopener noreferrer"
       class={linkClasses}
+      aria-label="Katholisches Jugendreferat Ravensburg (öffnet in neuem Tab)"
     >
       Katholischen Jugendreferat Ravensburg
     </a>
