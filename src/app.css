@@ -1,20 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-lexend: "Lexend", "sans-serif";
+  --font-bolle: "Bolle", "Comic Sans MS", "cursive", "sans-serif";
+
+  --color-white: #f5f5f5;
+
+  --color-black: oklch(10% 0.07 257);
+  --color-black-transparent: oklch(10% 0.07 257 / 0.6);
+  --color-black-light: oklch(10% 0.03 257);
+
+  --color-yellow: oklch(100% 0.22 112);
+  --color-yellow-transparent: oklch(100% 0.22 112 / 0.8);
+  --color-yellow-light: oklch(100% 0.14 112);
+
+  --color-green: oklch(1 0.22 160);
+  --color-green-transparent: oklch(1 0.22 160 / 0.8);
+  --color-green-light: oklch(1 0.14 160);
+
+  --color-pink: oklch(0.75 0.21 360);
+  --color-pink-transparent: oklch(0.75 0.21 360 / 0.8);
+  --color-pink-light: oklch(0.75 0.13 360);
+}
 
 @font-face {
   font-family: "Bolle";
   src: url("/fonts/MFHeavyHandedLargeRegular/font.woff2") format("woff2");
   font-display: block;
-}
-
-:root {
-  --color-yellow-transparent: theme("colors.yellow.transparent");
-  --color-green-transparent: theme("colors.green.transparent");
-  --color-black-transparent: theme("colors.black.transparent");
-  --color-yellow: theme("colors.yellow.DEFAULT");
-  --color-green: theme("colors.green.DEFAULT");
-  --color-black: theme("colors.black.DEFAULT");
 }
 
 body {

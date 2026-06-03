@@ -4,11 +4,13 @@
   export let data: PageData;
 </script>
 
-<div class="max-w-screen-sm mx-auto py-8 mb-8 prose prose-sm">
+<div class="max-w-(--breakpoint-sm) mx-auto py-8 mb-8 prose prose-sm">
   {@html data.content}
 </div>
 
 <style>
+  @reference "../../app.css";
+
   :global(.prose h1) {
     @apply text-lg font-bold mb-2;
   }

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { untrack } from "svelte";
   import { separatorLines, type SvgLine } from "$lib/separator-lines";
 
   type Props = {
@@ -8,8 +9,10 @@
 
   const { lines = separatorLines, class: className = "" }: Props = $props();
 
-  // Pick a random line when component is created
-  const selectedLine = lines[Math.floor(Math.random() * lines.length)];
+  // Pick a random line once when the component is created (intentionally non-reactive)
+  const selectedLine = untrack(
+    () => lines[Math.floor(Math.random() * lines.length)],
+  );
 </script>
 
 <svg

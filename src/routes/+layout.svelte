@@ -20,7 +20,7 @@
 </main>
 
 <footer
-  class="max-w-screen-sm mx-auto py-8 text-sm text-center space-y-4 text-balance"
+  class="max-w-(--breakpoint-sm) mx-auto py-8 text-sm text-center space-y-4 text-balance"
 >
   <p>
     Freizeit für Alle ist ein Projekt der Freizeitbande e.V. unter der

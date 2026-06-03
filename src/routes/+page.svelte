@@ -22,7 +22,7 @@
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="w-20 h-20 text-yellow bg-black group-hover:bg-opacity-90 transition duration-200 rounded-full p-4"
+          class="w-20 h-20 text-yellow bg-black group-hover:bg-black/90 transition duration-200 rounded-full p-4"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
