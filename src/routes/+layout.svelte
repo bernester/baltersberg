@@ -47,5 +47,7 @@
     <a href="/datenschutz" class={linkClasses}>Datenschutzerklärung</a>
     <span class="mx-2">•</span>
     <a href="/barrierefreiheit" class={linkClasses}>Barrierefreiheit</a>
+    <span class="mx-2">•</span>
+    <a href="/satzung" class={linkClasses}>Vereinssatzung</a>
   </p>
 </footer>
