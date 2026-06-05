@@ -5,7 +5,9 @@
 
   const QuestionClasses =
     "text-lg md:text-2xl/relaxed text-pretty font-medium mb-4";
-  const AnswerClasses = "text-md/relaxed md:text-lg/relaxed text-pretty mb-8";
+  const AnswerClasses = "text-md/relaxed md:text-lg/relaxed text-pretty mb-4";
+  const AnswerListClasses =
+    "list-disc text-md/relaxed md:text-lg/relaxed text-pretty mb-4 ml-8";
 </script>
 
 <section id="faq" class={`${sectionClasses.default}`}>
@@ -30,6 +32,48 @@
       Ausnahmen gern individuell besprochen werden. Sprecht uns einfach an –
       gemeinsam finden wir eine gute Lösung!
     </p>
+  </article>
+
+  <SeparatorLine />
+
+  <article>
+    <h3 class={QuestionClasses}>
+      Gibt es noch <span use:Marker>weitere finanzielle Unterstützung?</span>
+    </h3>
+    <p class={AnswerClasses}>
+      Geld soll niemals ein Grund sein, nicht dabei sein zu können. Neben
+      unseren drei einkommensabhängigen Beiträgen finden wir gemeinsam mit euch
+      eine Lösung, die passt. Zum Beispiel:
+    </p>
+    <ul class={AnswerListClasses}>
+      <li>Zahlung in Raten oder zu einem späteren Zeitpunkt</li>
+      <li>
+        Unterstützung beim Antrag auf das Bildungs- und Teilhabepaket (BuT) oder
+        für einen Zuschuss über das Jugendamt
+      </li>
+    </ul>
+    <p class={AnswerClasses}>
+      Schreibt uns einfach kurz, alles weitere besprechen wir dann vertraulich.
+    </p>
+  </article>
+
+  <SeparatorLine />
+
+  <article>
+    <h3 class={QuestionClasses}>
+      Könnt ihr <span use:Marker>besondere Ernährungsbedürfnisse</span> berücksichtigen?
+    </h3>
+    <p class={AnswerClasses}>
+      Wir kochen ausschließlich vegetarisch und vegan. Das hat hygienische und
+      ökologische Gründe.
+    </p>
+    <p class={AnswerClasses}>
+      Bei Allergien und Unverträglichkeiten tun wir unser Bestes. Wir haben
+      bereits Erfahrung mit vielen Allergien, zum Beispiel Gluten oder Laktose.
+      Ob wir ein bestimmtes Bedürfnis erfüllen können, klären wir gerne im
+      Voraus gemeinsam mit euch.
+    </p>
+    <p class={AnswerClasses}>Schreibt uns einfach, was wir wissen müssen.</p>
   </article>
 
   <SeparatorLine />
