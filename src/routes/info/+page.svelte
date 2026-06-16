@@ -264,8 +264,7 @@
   <!-- Bitte zu Hause lassen -->
   <section class={sectionClasses.default}>
     <h2 class={sectionHeadingClasses}>
-      Bitte <span use:Marker={"pink"} class="inline-block">zu Hause lassen</span
-      >
+      Bitte <span use:Marker class="inline-block">zu Hause lassen</span>
     </h2>
     <ul class="donts space-y-2 text-md/relaxed md:text-lg/relaxed mb-8">
       <li>Computerspiele</li>
