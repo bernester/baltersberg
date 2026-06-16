@@ -7,7 +7,7 @@
   const PriceClasses = "font-bolle text-4xl/none md:text-6xl/none";
 </script>
 
-<section class={`${sectionClasses.default}`} id="mehr">
+<section class={sectionClasses.default} id="mehr">
   <div class="flex flex-col gap-8 text-center">
     <h2 class={headlineClasses}>
       Was <span use:Circle style="inline-block">kostet</span> die Freizeit?
@@ -45,8 +45,8 @@
       <p class="text-sm text-balance">
         Wenn ihr Fragen zu den Preisen habt oder Hilfe braucht, schreibt uns
         eine E-Mail an: <a
-          href="mailto:hallo@freizeitban.de"
-          class={linkClasses}>hallo@freizeitban.de</a
+          href="mailto:{data.contact.email}"
+          class={linkClasses}>{data.contact.email}</a
         > Wir helfen euch gerne! 😊
       </p>
     </div>

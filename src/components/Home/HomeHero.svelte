@@ -7,7 +7,7 @@
   import { scrollTo } from "svelte-scrolling";
 </script>
 
-<section class={`${sectionClasses.default}`}>
+<section class={sectionClasses.default}>
   <div class="flex flex-col gap-6 items-center text-center">
     <h1 class="text-6xl/tight md:text-9xl/tight font-bolle uppercase">
       Zeit für
@@ -23,7 +23,7 @@
 
     {#if data.registrationOpen}
       <RegisterButton />
-      <a href="#mehr" use:scrollTo={"mehr"} class={`${linkClasses}`}
+      <a href="#mehr" use:scrollTo={"mehr"} class={linkClasses}
         >Mehr erfahren</a
       >
     {/if}

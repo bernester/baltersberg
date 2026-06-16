@@ -49,7 +49,8 @@
     <p class={paragraphClasses}>
       Die <strong>Anreise</strong> beginnt am
       <span use:Underline
-        >{formatDate(data.dates.camp.start)} um 11 Uhr</span
+        >{formatDate(data.dates.camp.start)}
+        {data.schedule.arrivalTime}</span
       >. Ihr erhaltet vorab alle Unterlagen per Post — bitte bringt sie
       ausgefüllt zur Anreise mit.
     </p>
@@ -57,14 +58,15 @@
       Nach zehn unvergesslichen Tagen müssen wir uns auch schon wieder
       verabschieden. Die <strong>Abreise</strong> ist am
       <span use:Underline
-        >{formatDate(data.dates.camp.end)} zwischen 11 und 13 Uhr</span
+        >{formatDate(data.dates.camp.end)}
+        {data.schedule.departureTime}</span
       >.
     </p>
     <p class={paragraphClasses}>
       Die An- und Abreise sollte selbst organisiert werden. Solltet ihr Hilfe
       brauchen, schreibt uns einfach an
-      <a href="mailto:hallo@freizeitban.de" class={linkClasses}
-        >hallo@freizeitban.de</a
+      <a href="mailto:{data.contact.email}" class={linkClasses}
+        >{data.contact.email}</a
       >.
     </p>
   </section>
@@ -110,12 +112,16 @@
     </p>
     <div class="flex flex-col gap-3 items-center text-center">
       <p class="text-2xl md:text-3xl font-bolle">
-        <a href="tel:+4917660947744" class={linkClasses}>0176 609 477 44</a>
-        <span class="text-base font-normal font-sans">(Berni)</span>
+        <a href="tel:{data.contact.phone}" class={linkClasses}
+          >{data.contact.phoneDisplay}</a
+        >
+        <span class="text-base font-normal font-sans"
+          >({data.contact.phoneOwner})</span
+        >
       </p>
       <p class="text-2xl md:text-3xl font-bolle">
-        <a href="mailto:hallo@freizeitban.de" class={linkClasses}
-          >hallo@freizeitban.de</a
+        <a href="mailto:{data.contact.email}" class={linkClasses}
+          >{data.contact.email}</a
         >
       </p>
     </div>
@@ -134,9 +140,10 @@
     <div class="text-center">
       <address class="not-italic font-bolle text-xl md:text-2xl leading-relaxed">
         Freizeitbande (Name des Kindes)<br />
-        c/o Martin Bentele<br />
-        Buch 4<br />
-        88260 Argenbühl
+        c/o {data.venue.mailRecipient}<br />
+        {data.venue.street}<br />
+        {data.venue.postalCode}
+        {data.venue.city}
       </address>
     </div>
   </section>

@@ -9,7 +9,7 @@
   const TermineSummaryClasses = "text-md md:text-lg";
 </script>
 
-<section class={`${sectionClasses.wide}`}>
+<section class={sectionClasses.wide}>
   <h2 class={`${headlineClasses} text-center mb-12 md:mb-20`}>
     Termine <span use:Circle={"green"}>2026</span>
   </h2>

@@ -5,7 +5,7 @@
   import data from "./../../data.json";
 </script>
 
-<article class={`${sectionClasses.default}`}>
+<article class={sectionClasses.default}>
   <h2 class={`${headlineClasses} mb-8 text-center text-balance`}>
     Was ist die <span use:Marker class="inline-block">Freizeit für Alle?</span>
   </h2>

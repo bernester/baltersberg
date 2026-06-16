@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Marker, Underline } from "$lib/annotate";
   import {
     buttonDefaultClasses,
@@ -7,11 +7,12 @@
     sectionClasses,
     subHeadlineClasses,
   } from "$lib/styles";
+  import data from "../../data.json";
 
   const ParagraphClasses = "text-md/relaxed md:text-lg/relaxed text-pretty";
 </script>
 
-<section class={`${sectionClasses.default}`}>
+<section class={sectionClasses.default}>
   <h2 class={`${headlineClasses} text-center mb-8`}>Was gibt es zu tun?</h2>
   <p class="text-md/relaxed md:text-lg/relaxed text-center text-pretty mb-8">
     Eine Sommerfreizeit ist wie ein kleines Dorf. Und unsere Freizeit ist <span
@@ -21,7 +22,7 @@
   </p>
   <div class="text-center">
     <a
-      href="https://tally.so/r/nrAk42"
+      href={data.registration.team}
       class={[buttonDefaultClasses, primaryButtonClasses, "!text-green-light"]}
       rel="nofollow noopener noreferrer"
       target="_blank"
@@ -30,7 +31,7 @@
     >
   </div>
 </section>
-<section class={`${sectionClasses.wide}`}>
+<section class={sectionClasses.wide}>
   <section class="grid grid-cols-2 gap-y-20 gap-x-8">
     <article>
       <h3

@@ -21,22 +21,24 @@
       <dd class="text-xl text-balance">
         Am <span class="font-bold" use:Marker
           >{formatDate(data.dates.camp.start)}
-          ab 11 Uhr</span
+          {data.schedule.arrivalTime}</span
         > könnt ihr anreisen.
       </dd>
     </div>
     <div class="space-y-1">
       <dt class="font-bold text-lg">Abreise:</dt>
-      <dd class="text-lg text-balance">
-        Die Abreise beginnt <span class="font-bold" use:Marker
-          >{formatDate(data.dates.camp.end)} ab 11 Uhr</span
+      <dd class="text-xl text-balance">
+        Die Abreise ist am <span class="font-bold" use:Marker
+          >{formatDate(data.dates.camp.end)} {data.schedule.departureTime}</span
         >
       </dd>
     </div>
     <div class="space-y-1">
-      <dt class="font-bold text-lg">Addresse:</dt>
+      <dt class="font-bold text-lg">Adresse:</dt>
       <dd class="text-xl text-balance">
-        Zeltplatz am Buchweiher, Buch 4, 88260 Argenbühl
+        {data.venue.name}, {data.venue.street},
+        {data.venue.postalCode}
+        {data.venue.city}
       </dd>
     </div>
     <div class="space-y-1">

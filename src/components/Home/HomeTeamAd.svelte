@@ -8,7 +8,7 @@
   } from "$lib/styles";
 </script>
 
-<section class={`${sectionClasses.default}`}>
+<section class={sectionClasses.default}>
   <div class="flex flex-col gap-8 items-center text-center">
     <h2 class={`${headlineClasses} text-center text-balance`}>
       <span use:Marker={"green"} class="inline-block">Mach mit</span> in unserem

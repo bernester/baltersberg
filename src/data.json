@@ -18,9 +18,30 @@
       "end": "2026-08-24"
     }
   },
+  "schedule": {
+    "arrivalTime": "ab 11 Uhr",
+    "departureTime": "zwischen 11 und 13 Uhr"
+  },
   "prices": {
     "regular": 280,
     "low": 180,
     "none": 140
+  },
+  "contact": {
+    "email": "hallo@freizeitban.de",
+    "phone": "+4917660947744",
+    "phoneDisplay": "0176 609 477 44",
+    "phoneOwner": "Berni"
+  },
+  "venue": {
+    "name": "Zeltplatz am Buchweiher",
+    "street": "Buch 4",
+    "postalCode": "88260",
+    "city": "Argenbühl",
+    "mailRecipient": "Martin Bentele"
+  },
+  "registration": {
+    "participants": "https://tally.so/r/3EKKMN",
+    "team": "https://tally.so/r/nrAk42"
   }
 }

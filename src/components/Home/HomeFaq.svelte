@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
   import SeparatorLine from "$components/Common/separator-line.svelte";
   import { Marker, Underline } from "$lib/annotate";
   import { headlineClasses, linkClasses, sectionClasses } from "$lib/styles";
+  import data from "../../data.json";
 
   const QuestionClasses =
     "text-lg md:text-2xl/relaxed text-pretty font-medium mb-4";
@@ -10,7 +11,7 @@
     "list-disc text-md/relaxed md:text-lg/relaxed text-pretty mb-4 ml-8";
 </script>
 
-<section id="faq" class={`${sectionClasses.default}`}>
+<section id="faq" class={sectionClasses.default}>
   <h2 class={`${headlineClasses} text-center mb-8`}>
     Häufige <span use:Marker class="inline-block">Fragen</span>
   </h2>
@@ -54,8 +55,8 @@
     </ul>
     <p class={AnswerClasses}>
       Schreibt uns einfach kurz an <a
-        href="mailto:hallo@freizeitban.de"
-        class={linkClasses}>hallo@freizeitban.de</a
+        href="mailto:{data.contact.email}"
+        class={linkClasses}>{data.contact.email}</a
       >, alles weitere besprechen wir dann vertraulich.
     </p>
   </article>
@@ -78,8 +79,8 @@
     </p>
     <p class={AnswerClasses}>
       Schreibt uns einfach an <a
-        href="mailto:hallo@freizeitban.de"
-        class={linkClasses}>hallo@freizeitban.de</a
+        href="mailto:{data.contact.email}"
+        class={linkClasses}>{data.contact.email}</a
       >, was wir wissen müssen.
     </p>
   </article>
@@ -127,8 +128,8 @@
     </p>
     <p class={AnswerClasses}>
       Schreibt uns einfach an <a
-        href="mailto:hallo@freizeitban.de"
-        class={linkClasses}>hallo@freizeitban.de</a
+        href="mailto:{data.contact.email}"
+        class={linkClasses}>{data.contact.email}</a
       >, damit wir gemeinsam eine Lösung finden.
     </p>
   </article>
@@ -137,8 +138,8 @@
 
   <p class="text-xl font-bold mb-4 text-center">
     <span use:Marker>Noch Fragen?</span> Schreibt uns an
-    <a href="mailto:hallo@freizeitban.de" class={linkClasses}
-      >hallo@freizeitban.de</a
+    <a href="mailto:{data.contact.email}" class={linkClasses}
+      >{data.contact.email}</a
     >
   </p>
 </section>

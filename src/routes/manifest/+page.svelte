@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import BackLink from "$components/Common/BackLink.svelte";
   import Divider from "$components/Common/Divider.svelte";
   import { Marker, Underline } from "$lib/annotate";
@@ -10,16 +10,14 @@
   const h3Classes =
     "text-2xl/tight md:text-4xl/tight font-bolle uppercase mt-8 mb-4";
   const listItemClasses =
-    "text-md/relaxed md:text-lg/relaxed text-pretty mb-4 mb-4";
-  export const proseWrapperClasses =
-    "max-w-(--breakpoint-sm) mx-auto px-4 py-8 mb-8";
+    "text-md/relaxed md:text-lg/relaxed text-pretty mb-4";
 </script>
 
 <svelte:head>
   <title>Manifest – Freizeit für Alle</title>
 </svelte:head>
 
-<section class={proseWrapperClasses}>
+<section class="max-w-(--breakpoint-sm) mx-auto px-4 py-8 mb-8">
   <BackLink />
   <h1 class="text-4xl/tight md:text-7xl/tight font-bolle uppercase mb-6">
     Das Freizeitbanden <span use:Marker>Manifest</span>

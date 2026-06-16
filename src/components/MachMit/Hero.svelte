@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Marker } from "$lib/annotate";
   import {
     buttonDefaultClasses,
@@ -7,9 +7,10 @@
     sectionClasses,
   } from "$lib/styles";
   import { scrollTo } from "svelte-scrolling";
+  import data from "../../data.json";
 </script>
 
-<section class={`${sectionClasses.default}`}>
+<section class={sectionClasses.default}>
   <h1
     class="text-6xl/tight md:text-8xl/tight font-bolle uppercase text-center mb-8"
   >
@@ -17,7 +18,7 @@
   </h1>
   <div class="flex flex-col gap-6 items-center mb-20">
     <a
-      href="https://tally.so/r/nrAk42"
+      href={data.registration.team}
       class={[buttonDefaultClasses, primaryButtonClasses, "!text-green-light"]}
       rel="nofollow noopener noreferrer"
       target="_blank"
@@ -25,7 +26,7 @@
       >Werde Teil des Teams</a
     >
 
-    <a href="#faq" use:scrollTo={"faq"} class={`${linkClasses}`}
+    <a href="#faq" use:scrollTo={"faq"} class={linkClasses}
       >Häufige Fragen</a
     >
   </div>

@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
   import { buttonDefaultClasses, primaryButtonClasses } from "$lib/styles";
+  import data from "../../data.json";
 </script>
 
 <a
-  href="https://tally.so/r/3EKKMN"
+  href={data.registration.participants}
   class={[buttonDefaultClasses, primaryButtonClasses]}
   rel="nofollow noopener noreferrer"
   target="_blank"
