@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import data from "../../data.json";
   import { Circle, Underline } from "$lib/annotate";
   import { headlineClasses, sectionClasses } from "$lib/styles";

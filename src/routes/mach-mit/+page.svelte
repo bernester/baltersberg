@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Aufgaben from "$components/MachMit/Aufgaben.svelte";
   import Faq from "$components/MachMit/Faq.svelte";
   import Hero from "$components/MachMit/Hero.svelte";

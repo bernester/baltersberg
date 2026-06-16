@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import HomePrices from "$components/Home/HomePrices.svelte";
   import HomeHero from "$components/Home/HomeHero.svelte";
   import HomeSummary from "$components/Home/HomeSummary.svelte";

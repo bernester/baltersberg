@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import "@fontsource/lexend/300.css";
   import "@fontsource/lexend/400.css";
   import "@fontsource/lexend/700.css";
