@@ -1,6 +1,7 @@
 <script>
   import { Marker, Underline } from "$lib/annotate";
   import {
+    buttonDefaultClasses,
     headlineClasses,
     primaryButtonClasses,
     sectionClasses,
@@ -21,7 +22,7 @@
   <div class="text-center">
     <a
       href="https://tally.so/r/nrAk42"
-      class={`${primaryButtonClasses} !text-green-light`}
+      class={[buttonDefaultClasses, primaryButtonClasses, "!text-green-light"]}
       rel="nofollow noopener noreferrer"
       target="_blank"
       aria-label="Werde Teil des Teams (öffnet in neuem Tab)"

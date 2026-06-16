@@ -3,7 +3,7 @@
   import "@fontsource/lexend/400.css";
   import "@fontsource/lexend/700.css";
   import "../app.css";
-  import Logo from "$components/Common/Logo.svelte";
+  import Logo from "$components/Common/Logo-ani.svelte";
   import { linkClasses } from "$lib/styles";
 </script>
 
@@ -49,5 +49,7 @@
     <a href="/barrierefreiheit" class={linkClasses}>Barrierefreiheit</a>
     <span class="mx-2">•</span>
     <a href="/satzung" class={linkClasses}>Vereinssatzung</a>
+    <span class="mx-2">•</span>
+    <a href="/schutzkonzept" class={linkClasses}>Schutzkonzept</a>
   </p>
 </footer>
