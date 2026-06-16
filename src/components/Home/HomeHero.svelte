@@ -15,7 +15,7 @@
     </h1>
 
     <p class="text-md/relaxed md:text-2xl/relaxed font-bold text-balance">
-      Das inklusive Sommer-Zeltlager für Alle.
+      Die inklusive Sommerfreizeit für Alle.
       <span use:Underline>
         {formatDate(data.dates.camp.start)} - {formatDate(data.dates.camp.end)}
       </span>
@@ -23,10 +23,8 @@
 
     {#if data.registrationOpen}
       <RegisterButton />
-      <a
-        href="#mehr"
-        use:scrollTo={"mehr"}
-        class={`${linkClasses}`}>Mehr erfahren</a
+      <a href="#mehr" use:scrollTo={"mehr"} class={`${linkClasses}`}
+        >Mehr erfahren</a
       >
     {/if}
   </div>

@@ -42,6 +42,15 @@
     </a>
   </section>
   <HomePrices />
+  <section class="flex justify-center">
+    <img
+      src="/jugger.svg"
+      alt="Marshmallow sitzt auf einem Lagerfeuer"
+      class="w-[640px] max-w-full my-8"
+      loading="lazy"
+      draggable="false"
+    />
+  </section>
   <HomeSummary />
   <section class="flex justify-center">
     <img
