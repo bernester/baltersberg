@@ -1,6 +1,15 @@
+<script lang="ts">
+  type Props = {
+    /** Rendered width/height in px (the logo is square). */
+    size?: number;
+  };
+
+  const { size = 80 }: Props = $props();
+</script>
+
 <svg
-  width="80"
-  height="80"
+  width={size}
+  height={size}
   viewBox="0 0 800 800"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,25 @@
   import "@fontsource/lexend/700.css";
   import "../app.css";
   import Logo from "$components/Common/Logo-ani.svelte";
+  import RegisterButton from "$components/Common/RegisterButton.svelte";
+  import data from "../data.json";
   import { linkClasses } from "$lib/styles";
+  import { prefersReducedMotion } from "svelte/motion";
+  import { fly } from "svelte/transition";
+
+  // The centered logo lives in normal flow at the top. Once it scrolls out of
+  // view, reveal a compact sticky navbar (logo left, register button right).
+  let header = $state<HTMLElement>();
+  let showNav = $state(false);
+
+  $effect(() => {
+    if (!header) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => (showNav = !entry.isIntersecting),
+    );
+    observer.observe(header);
+    return () => observer.disconnect();
+  });
 </script>
 
 <svelte:head>
@@ -16,11 +34,32 @@
 >
   Zum Hauptinhalt springen
 </a>
-<header class="p-8 flex justify-center">
+<header bind:this={header} class="p-8 flex justify-center">
   <a href="/" aria-label="Zur Startseite">
     <Logo />
   </a>
 </header>
+
+{#if showNav}
+  <nav
+    transition:fly={{
+      y: -80,
+      duration: prefersReducedMotion.current ? 0 : 300,
+    }}
+    class="fixed top-0 inset-x-0 z-40"
+  >
+    <div
+      class="max-w-5xl mx-auto px-8 py-3 flex items-center justify-between gap-4"
+    >
+      <a href="/" aria-label="Zur Startseite">
+        <Logo size={80} />
+      </a>
+      {#if data.registrationOpen}
+        <RegisterButton small />
+      {/if}
+    </div>
+  </nav>
+{/if}
 <main id="main" class="w-full text-black">
   <slot />
 </main>
