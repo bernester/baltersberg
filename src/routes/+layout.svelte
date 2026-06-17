@@ -42,14 +42,21 @@
     </a>
   </p>
   <p>
-    <a href="/impressum" class={linkClasses}>Impressum</a>
-    <span class="mx-2">•</span>
-    <a href="/datenschutz" class={linkClasses}>Datenschutzerklärung</a>
-    <span class="mx-2">•</span>
-    <a href="/barrierefreiheit" class={linkClasses}>Barrierefreiheit</a>
-    <span class="mx-2">•</span>
-    <a href="/satzung" class={linkClasses}>Vereinssatzung</a>
-    <span class="mx-2">•</span>
+    <span class="whitespace-nowrap">
+      <a href="/impressum" class={linkClasses}>Impressum</a>
+      <span class="mx-2" aria-hidden="true">•</span>
+    </span>
+    <span class="whitespace-nowrap">
+      <a href="/datenschutz" class={linkClasses}>Datenschutzerklärung</a>
+    </span>
+    <span class="whitespace-nowrap">
+      <a href="/barrierefreiheit" class={linkClasses}>Barrierefreiheit</a>
+      <span class="mx-2" aria-hidden="true">•</span>
+    </span>
+    <span class="whitespace-nowrap">
+      <a href="/satzung" class={linkClasses}>Vereinssatzung</a>
+      <span class="mx-2" aria-hidden="true">•</span>
+    </span>
     <a href="/schutzkonzept" class={linkClasses}>Schutzkonzept</a>
   </p>
 </footer>
