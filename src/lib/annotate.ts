@@ -1,7 +1,7 @@
 import { annotate } from "rough-notation";
 import type { Action } from "svelte/action";
 
-type AnnotateColor = "green" | "yellow";
+type AnnotateColor = "green" | "yellow" | "black";
 
 // Reuse rough-notation's own types instead of duplicating them.
 type RoughOptions = Parameters<typeof annotate>[1];
@@ -52,6 +52,7 @@ function createAnnotation(
 const transparentColor: Record<AnnotateColor, string> = {
   green: "var(--color-green-transparent)",
   yellow: "var(--color-yellow-transparent)",
+  black: "var(--color-black-transparent)",
 };
 
 export const Underline: Action<HTMLElement> = (node) =>
@@ -85,3 +86,60 @@ export const Marker: Action<HTMLElement, AnnotateColor | undefined> = (
     multiline: true,
     iterations: 1,
   });
+
+export const Box: Action<HTMLElement, AnnotateColor | undefined> = (
+  node,
+  color = "black",
+) =>
+  createAnnotation(node, {
+    type: "box",
+    strokeWidth: 3,
+    padding: 8,
+    color: transparentColor[color],
+    multiline: true,
+  });
+
+export const Brackets: Action<HTMLElement, AnnotateColor | undefined> = (
+  node,
+  color = "black",
+) =>
+  createAnnotation(node, {
+    type: "bracket",
+    brackets: ["left", "right"],
+    strokeWidth: 3,
+    padding: 8,
+    color: transparentColor[color],
+    multiline: true,
+  });
+
+/**
+ * Toggleable strike-through. Unlike the actions above (which fire once when
+ * the node scrolls into view), this one reacts to a boolean parameter —
+ * drawing the line when `active` is true and removing it when false — so it can
+ * follow a checkbox's checked state. The annotation is created up front but not
+ * drawn until shown, so it's cheap for long lists.
+ */
+export const Strike: Action<HTMLElement, boolean | undefined> = (
+  node,
+  active = false,
+) => {
+  const annotation = annotate(node, {
+    type: "strike-through",
+    strokeWidth: 2,
+    iterations: 2,
+    color: "var(--color-black)",
+    multiline: true,
+    animate: !prefersReducedMotion(),
+  });
+  if (active) annotation.show();
+
+  return {
+    update(active = false) {
+      if (active) annotation.show();
+      else annotation.hide();
+    },
+    destroy() {
+      annotation.remove();
+    },
+  };
+};

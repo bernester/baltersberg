@@ -1,12 +1,12 @@
 <script lang="ts">
   import data from "../../data.json";
   import { formatDate } from "$lib/utils";
-  import { headlineClasses, sectionClasses } from "$lib/styles";
+  import { titleClasses, sectionClasses } from "$lib/styles";
   import { Marker } from "$lib/annotate";
 </script>
 
 <section class={`${sectionClasses.wide} space-y-6`}>
-  <h2 class={`${headlineClasses} text-center mb-8`}>
+  <h2 class={[titleClasses, "text-center mb-8"]}>
     Die Freizeit auf einen Blick
   </h2>
   <dl class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">

@@ -38,3 +38,45 @@ body {
   outline: 2px solid var(--color-black);
   outline-offset: 2px;
 }
+
+/* Primary button: a hard "ledge" shadow — a yellow edge (the first layer
+   inherits currentColor) sitting on a black base — that the button rises off
+   on hover and slams down into on click. The shadow follows the squircle
+   corners. The black base uses the design token so it matches the button face,
+   not pure CSS black. */
+.btn-primary {
+  box-shadow:
+    0 6px 0 -2px,
+    0 6px 0 0 var(--color-black);
+  transition: box-shadow 80ms ease;
+}
+
+.btn-primary:hover {
+  box-shadow:
+    0 8px 0 -2px,
+    0 8px 0 0 var(--color-black);
+}
+
+.btn-primary:active {
+  box-shadow:
+    0 4px 0 -2px,
+    0 4px 0 0 var(--color-black);
+}
+
+.btn-interaction {
+  transition: transform 80ms ease;
+}
+
+.btn-interaction:hover {
+  transform: translateY(-2px);
+}
+
+.btn-interaction:active {
+  transform: translateY(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary {
+    transition: none;
+  }
+}

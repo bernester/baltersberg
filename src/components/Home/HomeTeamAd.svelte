@@ -2,7 +2,7 @@
   import { Marker } from "$lib/annotate";
   import {
     buttonDefaultClasses,
-    headlineClasses,
+    titleClasses,
     primaryButtonClasses,
     sectionClasses,
   } from "$lib/styles";
@@ -10,7 +10,7 @@
 
 <section class={sectionClasses.default}>
   <div class="flex flex-col gap-8 items-center text-center">
-    <h2 class={`${headlineClasses} text-center text-balance`}>
+    <h2 class={[titleClasses, "text-center text-balance"]}>
       <span use:Marker={"green"} class="inline-block">Mach mit</span> in unserem
       Team
     </h2>

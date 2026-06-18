@@ -1,12 +1,12 @@
 <script lang="ts">
   import RegisterButton from "$components/Common/RegisterButton.svelte";
   import { Marker, Underline } from "$lib/annotate";
-  import { headlineClasses, linkClasses, sectionClasses } from "$lib/styles";
+  import { titleClasses, linkClasses, sectionClasses } from "$lib/styles";
   import data from "./../../data.json";
 </script>
 
 <article class={sectionClasses.default}>
-  <h2 class={`${headlineClasses} mb-8 text-center text-balance`}>
+  <h2 class={[titleClasses, "mb-8 text-center text-balance"]}>
     Was ist die <span use:Marker class="inline-block">Freizeit für Alle?</span>
   </h2>
   <p class="text-xl/relaxed text-pretty mb-[1em]">
@@ -22,9 +22,9 @@
     wohl fühlen.
   </p>
   <p class="text-xl/relaxed text-pretty mb-[1em]">
-    <span use:Underline>Bunt. Laut. Wild. Geborgen.</span> In unserem
+    <strong use:Underline>Bunt. Laut. Wild. Geborgen.</strong> In unserem
     <a href="/manifest" class={linkClasses}>Freizeitbanden Manifest</a> erfahrt ihr
-    noch mehr was uns antreibt.
+    was uns antreibt.
   </p>
 
   {#if data.registrationOpen}

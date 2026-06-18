@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { headlineClasses, linkClasses, sectionClasses } from "$lib/styles";
+  import { titleClasses, linkClasses, sectionClasses } from "$lib/styles";
   import data from "../../data.json";
 
   const QuestionClasses = "text-lg md:text-xl font-bold mb-4";
@@ -7,7 +7,7 @@
 </script>
 
 <section id="faq" class={sectionClasses.default}>
-  <h2 class={`${headlineClasses} text-center mb-8`}>Häufige Fragen</h2>
+  <h2 class={[titleClasses, "text-center mb-8"]}>Häufige Fragen</h2>
 
   <article>
     <h3 class={QuestionClasses}>Ab wie vielen Jahren kann man mitmachen?</h3>

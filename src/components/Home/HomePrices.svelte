@@ -1,7 +1,7 @@
 <script lang="ts">
   import RegisterButton from "$components/Common/RegisterButton.svelte";
   import { Circle, Underline } from "$lib/annotate";
-  import { headlineClasses, linkClasses, sectionClasses } from "$lib/styles";
+  import { titleClasses, linkClasses, sectionClasses } from "$lib/styles";
   import data from "../../data.json";
 
   const PriceClasses = "font-bolle text-4xl/none md:text-6xl/none";
@@ -9,7 +9,7 @@
 
 <section class={sectionClasses.default} id="mehr">
   <div class="flex flex-col gap-8 text-center">
-    <h2 class={headlineClasses}>
+    <h2 class={titleClasses}>
       Was <span use:Circle style="inline-block">kostet</span> die Freizeit?
     </h2>
 

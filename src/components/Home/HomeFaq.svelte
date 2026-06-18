@@ -1,7 +1,13 @@
 <script lang="ts">
   import SeparatorLine from "$components/Common/separator-line.svelte";
-  import { Marker, Underline } from "$lib/annotate";
-  import { headlineClasses, linkClasses, sectionClasses } from "$lib/styles";
+  import { Box, Marker, Underline } from "$lib/annotate";
+  import {
+    leadParagraphClasses,
+    linkClasses,
+    paragraphClasses,
+    sectionClasses,
+    titleClasses,
+  } from "$lib/styles";
   import data from "../../data.json";
 
   const QuestionClasses =
@@ -12,9 +18,15 @@
 </script>
 
 <section id="faq" class={sectionClasses.default}>
-  <h2 class={`${headlineClasses} text-center mb-8`}>
+  <h2 class={[titleClasses, "text-center mb-8"]}>
     Häufige <span use:Marker class="inline-block">Fragen</span>
   </h2>
+
+  <div use:Box class={[leadParagraphClasses, "mb-6 p-8"]}>
+    <strong use:Underline>Ihr seid bereits angemeldet?</strong> Hier findet Ihr
+    <a href="/info" class={linkClasses}>alle Informationen</a> für eine reibungslose
+    Freizeit.
+  </div>
 
   <article>
     <h3 class={QuestionClasses}>

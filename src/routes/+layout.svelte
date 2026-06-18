@@ -49,7 +49,7 @@
     class="fixed top-0 inset-x-0 z-40"
   >
     <div
-      class="max-w-5xl mx-auto px-8 py-3 flex items-center justify-between gap-4"
+      class="max-w-7xl mx-auto px-8 py-3 flex items-center justify-between gap-4"
     >
       <a href="/" aria-label="Zur Startseite">
         <Logo size={80} />
