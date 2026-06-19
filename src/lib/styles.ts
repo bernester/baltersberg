@@ -11,7 +11,7 @@ export const primaryButtonClasses =
   "font-bold text-yellow bg-black btn-primary btn-interaction";
 
 export const secondaryButtonClasses =
-  "font-bold border-[2px] text-black btn-interaction";
+  "font-bold border-[2px] text-black btn-interaction bg-white/80 backdrop-blur-xs";
 
 export const titleClasses =
   "text-5xl/none md:text-7xl/none font-bolle uppercase";
@@ -23,10 +23,10 @@ export const subHeadlineClasses =
   "text-xl/none md:text-3xl/none font-bolle uppercase";
 
 export const leadParagraphClasses =
-  "text-lg/normal md:text-xl/relaxed text-pretty mb-4";
+  "text-lg/normal md:text-xl/relaxed text-pretty mb-[1em]";
 
 export const paragraphClasses =
-  "text-md/normal md:text-lg/relaxed text-pretty mb-4";
+  "text-md/normal md:text-lg/relaxed text-pretty mb-[1em]";
 
 export const proseWrapperClasses =
   "max-w-(--breakpoint-sm) mx-auto px-4 py-8 mb-8 prose prose-sm";

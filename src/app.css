@@ -4,7 +4,7 @@
   --font-lexend: "Lexend", "sans-serif";
   --font-bolle: "Bolle", "Comic Sans MS", "cursive", "sans-serif";
 
-  --color-white: #f5f5f5;
+  --color-white: #ffffff;
 
   --color-black: oklch(10% 0.07 257);
   --color-black-transparent: oklch(10% 0.07 257 / 0.6);
@@ -21,6 +21,8 @@
   --color-pink: oklch(0.75 0.21 360);
   --color-pink-transparent: oklch(0.75 0.21 360 / 0.8);
   --color-pink-light: oklch(0.75 0.13 360);
+
+  --color-pink-transparent: oklch(0.9 0.08 330 / 0.8);
 }
 
 @font-face {
@@ -48,7 +50,6 @@ body {
   box-shadow:
     0 6px 0 -2px,
     0 6px 0 0 var(--color-black);
-  transition: box-shadow 80ms ease;
 }
 
 .btn-primary:hover {
@@ -63,8 +64,13 @@ body {
     0 4px 0 0 var(--color-black);
 }
 
+/* Shared by primary and secondary buttons. Transitions both transform and
+   box-shadow here, in one rule, so it doesn't clobber .btn-primary's own
+   transition (equal specificity, later in source would win). */
 .btn-interaction {
-  transition: transform 80ms ease;
+  transition:
+    transform 80ms ease,
+    box-shadow 80ms ease;
 }
 
 .btn-interaction:hover {
@@ -76,7 +82,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .btn-primary {
+  .btn-interaction {
     transition: none;
   }
 }

@@ -23,7 +23,7 @@
   <div class="text-center">
     <a
       href={data.registration.team}
-      class={[buttonDefaultClasses, primaryButtonClasses, "!text-green-light"]}
+      class={[buttonDefaultClasses, primaryButtonClasses, "text-green-light!"]}
       rel="nofollow noopener noreferrer"
       target="_blank"
       aria-label="Werde Teil des Teams (öffnet in neuem Tab)"

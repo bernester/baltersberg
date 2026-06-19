@@ -43,5 +43,15 @@
   "registration": {
     "participants": "https://tally.so/r/3EKKMN",
     "team": "https://tally.so/r/nrAk42"
+  },
+  "donation": {
+    "betterplace": "https://www.betterplace.org/de/projects/180244?utm_campaign=user_share&utm_medium=ppp_stats&utm_source=Link&utm_content=bp",
+    "paypal": "",
+    "bank": {
+      "holder": "Freizeitbande e.V.",
+      "iban": "DE49 4306 0967 1354 6643 00",
+      "bic": "GENODEM1GLS",
+      "bankName": "GLS Gemeinschaftsbank eG"
+    }
   }
 }

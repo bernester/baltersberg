@@ -4,7 +4,6 @@
   import {
     leadParagraphClasses,
     linkClasses,
-    paragraphClasses,
     sectionClasses,
     titleClasses,
   } from "$lib/styles";
@@ -22,11 +21,25 @@
     Häufige <span use:Marker class="inline-block">Fragen</span>
   </h2>
 
-  <div use:Box class={[leadParagraphClasses, "mb-6 p-8"]}>
-    <strong use:Underline>Ihr seid bereits angemeldet?</strong> Hier findet Ihr
-    <a href="/info" class={linkClasses}>alle Informationen</a> für eine reibungslose
-    Freizeit.
-  </div>
+  <a href="/info" use:Box class="group mb-6 block">
+    <div
+      use:Marker={"pink"}
+      class={[
+        leadParagraphClasses,
+        "p-4 flex items-center justify-between gap-6",
+      ]}
+    >
+      <p class="text-md/normal md:text-lg/relaxed text-pretty">
+        <strong use:Underline>Ihr seid bereits angemeldet?</strong> Hier findet Ihr
+        alle Informationen für eine reibungslose Freizeit.
+      </p>
+      <img
+        src="/arrow-right.svg"
+        alt=""
+        class="w-12 flex-none motion-safe:transition-transform motion-safe:duration-200 motion-safe:group-hover:translate-x-1"
+      />
+    </div>
+  </a>
 
   <article>
     <h3 class={QuestionClasses}>

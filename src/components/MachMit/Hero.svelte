@@ -19,16 +19,14 @@
   <div class="flex flex-col gap-6 items-center mb-20">
     <a
       href={data.registration.team}
-      class={[buttonDefaultClasses, primaryButtonClasses, "!text-green-light"]}
+      class={[buttonDefaultClasses, primaryButtonClasses, "text-green-light!"]}
       rel="nofollow noopener noreferrer"
       target="_blank"
       aria-label="Werde Teil des Teams (öffnet in neuem Tab)"
       >Werde Teil des Teams</a
     >
 
-    <a href="#faq" use:scrollTo={"faq"} class={linkClasses}
-      >Häufige Fragen</a
-    >
+    <a href="#faq" use:scrollTo={"faq"} class={linkClasses}>Häufige Fragen</a>
   </div>
   <p class="text-md/relaxed md:text-lg/relaxed text-center text-pretty mb-8">
     Du liebst die Arbeit mit Kindern und Jugendlichen? Du bist spontan, wild und

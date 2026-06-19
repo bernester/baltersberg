@@ -29,8 +29,8 @@
           <span use:Marker class="inline-block">Informationen</span> für die Freizeit.
         </h1>
         <p class={leadParagraphClasses}>
-          Hier findet ihr alle wichtigen Informationen für eine reibungslose An-
-          und Abreise und für eine unvergessliche Freizeit:
+          Hier findest du alle wichtigen Informationen für eine reibungslose An-
+          und Abreise und eine unvergessliche Freizeit:
         </p>
       </article>
 
@@ -52,13 +52,13 @@
               ausgefüllt zur Anreise mit.
             </p>
             <ul class="packlist space-y-2 text-md/relaxed md:text-lg/relaxed">
-              <Check><strong>Ausgefüllte Anmeldekarte (Umschlag)</strong></Check>
+              <Check><strong>Ausgefüllte Anmeldekarte (Umschlag)</strong></Check
+              >
               <Check><strong>Versicherungskarte</strong></Check>
               <Check><strong>Kopie des Impfausweises</strong></Check>
               <Check>
                 <strong
-                  >Unterschriebene Freigabe für Bild- , Ton-, Video- und
-                  Filmaufnahmen</strong
+                  >Unterschriebene Freigabe für Bild-, Ton- und Videoaufnahmen</strong
                 >
               </Check>
             </ul>
@@ -136,8 +136,8 @@
             </h2>
             <p class={paragraphClasses}>
               <strong use:Underline>10&nbsp;€ Taschengeld</strong> sollten völlig
-              ausreichen. Es gibt keine Einkaufsmöglichkeiten in der näheren Umgebung
-              — an unserem Kiosk können sich alle mit Snacks versorgen.
+              ausreichen. In der näheren Umgebung gibt es keine Einkaufsmöglichkeiten.
+              An unserem Kiosk können sich aber alle mit Snacks versorgen.
             </p>
           </article>
 
@@ -149,7 +149,7 @@
             </h2>
             <p class={paragraphClasses}>
               Viel besser als ein schnelles Telefonat ist oft ein kleines
-              Care-Packet von Zuhause. Pakete und Päckchen könnt ihr an folgende
+              Care-Paket von Zuhause. Pakete und Päckchen könnt ihr an folgende
               Adresse schicken.
             </p>
 
@@ -170,27 +170,29 @@
 
   <!-- Packliste -->
   <section class={sectionClasses.wide}>
-    <h2 class={titleClasses}>
+    <h2 class={[titleClasses, "mb-8"]}>
       Das solltest du <span use:Marker class="inline-block">einpacken</span>
     </h2>
-    <div use:Box class="my-12">
-      <p class={paragraphClasses}>
-        Bitte alles mit <strong>Namensschildern</strong> versehen — dann findet
-        ihr verlorene oder verlegte Dinge leichter.
-        <strong use:Underline
-          >Fundsachen können nicht zurückgeschickt werden.</strong
-        >
-      </p>
-      <p class={paragraphClasses}>
-        <strong use:Underline>Wichtig!</strong> Für Teilnehmer:innen, die in
-        einem Haushalt wohnen: Bitte verpackt euer Gepäck
-        <strong>getrennt</strong>, da ihr in unterschiedlichen Zelten
-        untergebracht sein könntet.
-      </p>
-    </div>
-
     <div class="flex flex-col md:flex-row gap-12 md:gap-8">
       <div class="flex flex-1 flex-col gap-12 items-start">
+        <div use:Box>
+          <div class="p-4" use:Marker={"pink"}>
+            <p class={paragraphClasses}>
+              <strong use:Underline>Tipp:</strong>
+              Bitte alles mit <strong>Namensschildern</strong> versehen — dann
+              findest du verlorene oder verlegte Dinge leichter.
+              <strong use:Underline
+                >Fundsachen können nicht zurückgeschickt werden.</strong
+              >
+            </p>
+            <p class={paragraphClasses}>
+              <strong use:Underline>Wichtig!</strong> Geschwister und Kinder aus
+              demselben Haushalt: Bitte verpackt euer Gepäck
+              <strong>getrennt</strong>, da ihr in unterschiedlichen Zelten
+              untergebracht sein könntet.
+            </p>
+          </div>
+        </div>
         <article class="space-y-4">
           <h3 class={headlineClasses}>
             <span use:Underline>Kleidung</span>
@@ -231,7 +233,7 @@
 
         <article class="space-y-4">
           <h3 class={headlineClasses}>
-            <span use:Underline>Für's Zelt</span>
+            <span use:Underline>Fürs Zelt</span>
           </h3>
           <ul class="packlist space-y-2 text-md/relaxed md:text-lg/relaxed">
             <Check>
@@ -248,7 +250,8 @@
             <Check>Bei Bedarf eine Wärmflasche</Check>
           </ul>
         </article>
-
+      </div>
+      <div class="flex flex-1 flex-col gap-12 items-start">
         <article class="space-y-4">
           <h3 class={headlineClasses}>
             <span use:Underline>Für den Körper</span>
@@ -262,8 +265,6 @@
             <Check>Wenn möglich Mückenschutzmittel</Check>
           </ul>
         </article>
-      </div>
-      <div class="flex flex-1 flex-col gap-12 items-start">
         <article class="space-y-4">
           <h3 class={headlineClasses}>
             <span use:Underline>Für's Essen</span>
@@ -272,11 +273,10 @@
             <Check><strong>1 Trinkflasche</strong></Check>
             <Check><strong>Mindestens 2 Geschirrtücher</strong></Check>
             <Check>
-              Stabiles Geschirr aus Kunststoff, mit tiefem Teller (kein
-              Einweggeschirr)
+              Stabiles Geschirr mit tiefem Teller (kein Einweggeschirr)
             </Check>
-            <Check>1 großer Trinkbecher mit Henkel (Für heiße Getränke)</Check>
-            <Check>Besteck</Check>
+            <Check>1 großer Trinkbecher mit Henkel (für heiße Getränke)</Check>
+            <Check>Messer, Gabel, Löffel</Check>
           </ul>
         </article>
 
@@ -314,11 +314,15 @@
           </p>
         </article>
 
-        <p class={`${paragraphClasses} text-center text-balance`} use:Box>
-          Solltest du manche Dinge — wie einen Schlafsack — nicht besitzen oder
-          besorgen können, sag uns bitte rechtzeitig Bescheid. Wir helfen dir
-          gerne.
-        </p>
+        <div use:Box>
+          <div class="p-4" use:Marker={"pink"}>
+            <p class={`${paragraphClasses} text-center text-balance`}>
+              Solltest du manche Dinge — wie einen Schlafsack — nicht besitzen
+              oder besorgen können, sag uns bitte rechtzeitig Bescheid. Wir
+              helfen dir gerne.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

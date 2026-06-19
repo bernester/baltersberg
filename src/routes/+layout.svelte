@@ -6,9 +6,16 @@
   import Logo from "$components/Common/Logo-ani.svelte";
   import RegisterButton from "$components/Common/RegisterButton.svelte";
   import data from "../data.json";
-  import { linkClasses } from "$lib/styles";
+  import {
+    buttonSmallClasses,
+    linkClasses,
+    secondaryButtonClasses,
+  } from "$lib/styles";
   import { prefersReducedMotion } from "svelte/motion";
   import { fly } from "svelte/transition";
+  import type { Snippet } from "svelte";
+
+  const { children }: { children: Snippet } = $props();
 
   // The centered logo lives in normal flow at the top. Once it scrolls out of
   // view, reveal a compact sticky navbar (logo left, register button right).
@@ -54,14 +61,24 @@
       <a href="/" aria-label="Zur Startseite">
         <Logo size={80} />
       </a>
-      {#if data.registrationOpen}
-        <RegisterButton small />
-      {/if}
+      <div class="flex gap-4">
+        <a
+          href="/spenden"
+          class={[
+            buttonSmallClasses,
+            secondaryButtonClasses,
+            "btn-interaction",
+          ]}>Spenden</a
+        >
+        {#if data.registrationOpen}
+          <RegisterButton small />
+        {/if}
+      </div>
     </div>
   </nav>
 {/if}
 <main id="main" class="w-full text-black">
-  <slot />
+  {@render children()}
 </main>
 
 <footer
