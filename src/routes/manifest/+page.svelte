@@ -9,8 +9,7 @@
     "text-3xl/tight md:text-6xl/tight font-bolle uppercase mt-8 mb-4";
   const h3Classes =
     "text-2xl/tight md:text-4xl/tight font-bolle uppercase mt-8 mb-4";
-  const listItemClasses =
-    "text-md/relaxed md:text-lg/relaxed text-pretty mb-4";
+  const listItemClasses = "text-md/relaxed md:text-lg/relaxed text-pretty mb-4";
 </script>
 
 <svelte:head>
@@ -24,13 +23,11 @@
   </h1>
   <p class={paragraphClasses}>
     Die Freizeitbande ist eine Gemeinschaft engagierter Freiwilliger mit
-    pädagogischer Ausbildung und vielfältiger Erfahrung in der Kinder- und
-    Jugendarbeit, die sich zum Ziel gesetzt hat, Freizeit neu und ganzheitlich
-    zu denken und zu gestalten.
-  </p>
-  <p class={paragraphClasses}>
-    Die Freizeitbande setzt auf Inklusion und bedürfnisorientierte
-    Freizeitpädagogik.
+    unterschiedlichen Erfahrungen und Hintergründen – von langjährigen
+    Freizeitenprofis bis hin zu Menschen, die gerade erst in die Kinder- und
+    Jugendarbeit einsteigen. Gemeinsam haben wir uns zum Ziel gesetzt, Freizeit
+    neu und ganzheitlich zu denken und zu gestalten – traumasensibel,
+    bedürfnisorientiert und inklusiv.
   </p>
   <p class={paragraphClasses}>
     Die Freizeitbande ist ein Ort für Alle, unabhängig von Fähigkeiten,
@@ -59,9 +56,9 @@
     <li class={listItemClasses}>
       <strong use:Underline>Barrieren beseitigen:</strong> Wir wollen möglichst allen
       die Teilnahme in der Freizeitbande ermöglichen. Im direkten Austausch suchen
-      wir individuelle Lösungen für noch bestehende Barrieren. Für individuelle Bedürfnisse
-      bieten wir flexible Teilnahmemodelle an, wie beispielsweise die Teilnahme mit
-      persönlicher Assistenz oder ohne Übernachtung.
+      wir Lösungen für noch bestehende Barrieren. Für individuelle Bedürfnisse bieten
+      wir flexible Teilnahmemodelle an, wie beispielsweise die Teilnahme mit persönlicher
+      Assistenz oder ohne Übernachtung.
     </li>
     <li class={listItemClasses}>
       <strong use:Underline>Vielfalt im Team:</strong> Vielfalt zeigt sich auch in
