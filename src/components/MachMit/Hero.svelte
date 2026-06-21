@@ -1,14 +1,16 @@
-<script>
+<script lang="ts">
   import { Marker } from "$lib/annotate";
   import {
+    buttonDefaultClasses,
     linkClasses,
     primaryButtonClasses,
     sectionClasses,
   } from "$lib/styles";
   import { scrollTo } from "svelte-scrolling";
+  import data from "../../data.json";
 </script>
 
-<section class={`${sectionClasses.default}`}>
+<section class={sectionClasses.default}>
   <h1
     class="text-6xl/tight md:text-8xl/tight font-bolle uppercase text-center mb-8"
   >
@@ -16,18 +18,15 @@
   </h1>
   <div class="flex flex-col gap-6 items-center mb-20">
     <a
-      href="https://tally.so/r/nrAk42"
-      class={`${primaryButtonClasses} !text-green-light`}
-      rel="nofollow"
-      target="blank">Werde Teil des Teams</a
+      href={data.registration.team}
+      class={[buttonDefaultClasses, primaryButtonClasses, "text-green-light!"]}
+      rel="nofollow noopener noreferrer"
+      target="_blank"
+      aria-label="Werde Teil des Teams (öffnet in neuem Tab)"
+      >Werde Teil des Teams</a
     >
 
-    <a
-      href="mehr-erfahren"
-      use:scrollTo={"faq"}
-      class={`${linkClasses}`}
-      rel="presentation">Häufige Fragen</a
-    >
+    <a href="#faq" use:scrollTo={"faq"} class={linkClasses}>Häufige Fragen</a>
   </div>
   <p class="text-md/relaxed md:text-lg/relaxed text-center text-pretty mb-8">
     Du liebst die Arbeit mit Kindern und Jugendlichen? Du bist spontan, wild und

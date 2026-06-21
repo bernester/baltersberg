@@ -1,17 +1,19 @@
-<script>
+<script lang="ts">
   import { Marker, Underline } from "$lib/annotate";
   import {
-    headlineClasses,
+    buttonDefaultClasses,
+    titleClasses,
     primaryButtonClasses,
     sectionClasses,
-    subHeadlineClasses,
+    headlineClasses,
   } from "$lib/styles";
+  import data from "../../data.json";
 
   const ParagraphClasses = "text-md/relaxed md:text-lg/relaxed text-pretty";
 </script>
 
-<section class={`${sectionClasses.default}`}>
-  <h2 class={`${headlineClasses} text-center mb-8`}>Was gibt es zu tun?</h2>
+<section class={sectionClasses.default}>
+  <h2 class={[titleClasses, "text-center mb-8"]}>Was gibt es zu tun?</h2>
   <p class="text-md/relaxed md:text-lg/relaxed text-center text-pretty mb-8">
     Eine Sommerfreizeit ist wie ein kleines Dorf. Und unsere Freizeit ist <span
       use:Underline>ein ganz besonderes Dorf</span
@@ -20,20 +22,19 @@
   </p>
   <div class="text-center">
     <a
-      href="https://tally.so/r/nrAk42"
-      class={`${primaryButtonClasses} !text-green-light`}
-      rel="nofollow"
-      target="blank">Werde Teil des Teams</a
+      href={data.registration.team}
+      class={[buttonDefaultClasses, primaryButtonClasses, "text-green-light!"]}
+      rel="nofollow noopener noreferrer"
+      target="_blank"
+      aria-label="Werde Teil des Teams (öffnet in neuem Tab)"
+      >Werde Teil des Teams</a
     >
   </div>
 </section>
-<section class={`${sectionClasses.wide}`}>
+<section class={sectionClasses.wide}>
   <section class="grid grid-cols-2 gap-y-20 gap-x-8">
     <article>
-      <h3
-        class={`${subHeadlineClasses} mb-4 inline-block`}
-        use:Marker={"green"}
-      >
+      <h3 class={`${headlineClasses} mb-4 inline-block`} use:Marker={"green"}>
         <span use:Marker={"green"}>Betreuung</span>
       </h3>
       <p class={ParagraphClasses}>
@@ -44,10 +45,7 @@
       </p>
     </article>
     <article>
-      <h3
-        class={`${subHeadlineClasses} mb-4 inline-block`}
-        use:Marker={"green"}
-      >
+      <h3 class={`${headlineClasses} mb-4 inline-block`} use:Marker={"green"}>
         <span use:Marker={"green"}>Programm</span>
       </h3>
       <p class={ParagraphClasses}>
@@ -58,10 +56,7 @@
       </p>
     </article>
     <article>
-      <h3
-        class={`${subHeadlineClasses} mb-4 inline-block`}
-        use:Marker={"green"}
-      >
+      <h3 class={`${headlineClasses} mb-4 inline-block`} use:Marker={"green"}>
         <span use:Marker={"green"}>Küche</span>
       </h3>
       <p class={ParagraphClasses}>
@@ -72,7 +67,7 @@
       </p>
     </article>
     <article>
-      <h3 class={`${subHeadlineClasses} mb-4 inline-block`}>
+      <h3 class={`${headlineClasses} mb-4 inline-block`}>
         <span use:Marker={"green"}>Badeaufsicht</span>
       </h3>
       <p class={ParagraphClasses}>
@@ -83,7 +78,7 @@
       </p>
     </article>
     <article>
-      <h3 class={`${subHeadlineClasses} mb-4`}>
+      <h3 class={`${headlineClasses} mb-4`}>
         <span use:Marker={"green"}>Und der ganze Rest</span>
       </h3>
       <p class={ParagraphClasses}>

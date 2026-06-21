@@ -1,22 +1,88 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-lexend: "Lexend", "sans-serif";
+  --font-bolle: "Bolle", "Comic Sans MS", "cursive", "sans-serif";
+
+  --color-white: #ffffff;
+
+  --color-black: oklch(10% 0.07 257);
+  --color-black-transparent: oklch(10% 0.07 257 / 0.6);
+  --color-black-light: oklch(10% 0.03 257);
+
+  --color-yellow: oklch(100% 0.22 112);
+  --color-yellow-transparent: oklch(100% 0.22 112 / 0.8);
+  --color-yellow-light: oklch(100% 0.14 112);
+
+  --color-green: oklch(1 0.22 160);
+  --color-green-transparent: oklch(1 0.22 160 / 0.8);
+  --color-green-light: oklch(1 0.14 160);
+
+  --color-pink: oklch(0.75 0.21 360);
+  --color-pink-transparent: oklch(0.75 0.21 360 / 0.8);
+  --color-pink-light: oklch(0.75 0.13 360);
+
+  --color-pink-transparent: oklch(0.9 0.08 330 / 0.8);
+}
 
 @font-face {
   font-family: "Bolle";
   src: url("/fonts/MFHeavyHandedLargeRegular/font.woff2") format("woff2");
-  font-display: block;
-}
-
-:root {
-  --color-yellow-transparent: theme("colors.yellow.transparent");
-  --color-green-transparent: theme("colors.green.transparent");
-  --color-black-transparent: theme("colors.black.transparent");
-  --color-yellow: theme("colors.yellow.DEFAULT");
-  --color-green: theme("colors.green.DEFAULT");
-  --color-black: theme("colors.black.DEFAULT");
+  font-display: swap;
 }
 
 body {
   font-family: Lexend, sans-serif;
+}
+
+/* Global focus outline — applied uniformly to all focusable elements */
+:focus-visible {
+  outline: 2px solid var(--color-black);
+  outline-offset: 2px;
+}
+
+/* Primary button: a hard "ledge" shadow — a yellow edge (the first layer
+   inherits currentColor) sitting on a black base — that the button rises off
+   on hover and slams down into on click. The shadow follows the squircle
+   corners. The black base uses the design token so it matches the button face,
+   not pure CSS black. */
+.btn-primary {
+  box-shadow:
+    0 6px 0 -2px,
+    0 6px 0 0 var(--color-black);
+}
+
+.btn-primary:hover {
+  box-shadow:
+    0 8px 0 -2px,
+    0 8px 0 0 var(--color-black);
+}
+
+.btn-primary:active {
+  box-shadow:
+    0 4px 0 -2px,
+    0 4px 0 0 var(--color-black);
+}
+
+/* Shared by primary and secondary buttons. Transitions both transform and
+   box-shadow here, in one rule, so it doesn't clobber .btn-primary's own
+   transition (equal specificity, later in source would win). */
+.btn-interaction {
+  transition:
+    transform 80ms ease,
+    box-shadow 80ms ease;
+}
+
+.btn-interaction:hover {
+  transform: translateY(-2px);
+}
+
+.btn-interaction:active {
+  transform: translateY(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-interaction {
+    transition: none;
+  }
 }

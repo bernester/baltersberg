@@ -1,8 +1,11 @@
 import { sveltekit } from "@sveltejs/kit/vite";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 
+// $lib and $components aliases live in svelte.config.js (kit.alias) — they
+// flow through to Vite automatically, so we don't duplicate them here.
 export default defineConfig({
-  plugins: [sveltekit()],
+  plugins: [tailwindcss(), sveltekit()],
   build: {
     minify: "terser",
     terserOptions: {
@@ -10,24 +13,6 @@ export default defineConfig({
         drop_console: true,
         passes: 2,
       },
-    },
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            if (id.includes("svelte")) {
-              return "vendor-svelte";
-            }
-            return "vendor";
-          }
-        },
-      },
-    },
-  },
-  resolve: {
-    alias: {
-      $lib: "src/lib",
-      $components: "src/components",
     },
   },
 });

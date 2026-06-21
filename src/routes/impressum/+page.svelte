@@ -1,14 +1,23 @@
 <script lang="ts">
+  import BackLink from "$components/Common/BackLink.svelte";
+  import { proseWrapperClasses } from "$lib/styles";
   import type { PageData } from "./$types";
 
-  export let data: PageData;
+  let { data }: { data: PageData } = $props();
 </script>
 
-<div class="max-w-screen-sm mx-auto py-8 mb-8 prose prose-sm">
+<svelte:head>
+  <title>Impressum – Freizeit für Alle</title>
+</svelte:head>
+
+<div class={proseWrapperClasses}>
+  <BackLink />
   {@html data.content}
 </div>
 
 <style>
+  @reference "../../app.css";
+
   :global(.prose h1) {
     @apply text-lg font-bold mb-2;
   }

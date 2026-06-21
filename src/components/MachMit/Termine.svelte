@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   import data from "../../data.json";
   import { Circle, Underline } from "$lib/annotate";
-  import { headlineClasses, sectionClasses } from "$lib/styles";
+  import { titleClasses, sectionClasses } from "$lib/styles";
   import { formatDate, formatDateTime } from "$lib/utils";
 
   const TermineTitleClasses =
@@ -9,8 +9,8 @@
   const TermineSummaryClasses = "text-md md:text-lg";
 </script>
 
-<section class={`${sectionClasses.wide}`}>
-  <h2 class={`${headlineClasses} text-center mb-12 md:mb-20`}>
+<section class={sectionClasses.wide}>
+  <h2 class={[titleClasses, "text-center mb-12 md:mb-20"]}>
     Termine <span use:Circle={"green"}>2026</span>
   </h2>
 

@@ -1,12 +1,13 @@
-<script>
-  import { headlineClasses, linkClasses, sectionClasses } from "$lib/styles";
+<script lang="ts">
+  import { titleClasses, linkClasses, sectionClasses } from "$lib/styles";
+  import data from "../../data.json";
 
   const QuestionClasses = "text-lg md:text-xl font-bold mb-4";
   const AnswerClasses = "text-md/relaxed md:text-lg/relaxed mb-8";
 </script>
 
-<section id="faq" class={`${sectionClasses.default}`}>
-  <h2 class={`${headlineClasses} text-center mb-8`}>Häufige Fragen</h2>
+<section id="faq" class={sectionClasses.default}>
+  <h2 class={[titleClasses, "text-center mb-8"]}>Häufige Fragen</h2>
 
   <article>
     <h3 class={QuestionClasses}>Ab wie vielen Jahren kann man mitmachen?</h3>
@@ -36,10 +37,8 @@
   </article>
   <p class="text-xl font-bold mb-4">
     Du hast noch weitere Fragen? Schreibe uns einfach an <a
-      href="mailto:hallo@freizeitban.de"
-      class={linkClasses}
-      target="_blank"
-      rel="noopener noreferrer">hallo@freizeitban.de</a
+      href="mailto:{data.contact.email}"
+      class={linkClasses}>{data.contact.email}</a
     >
   </p>
 </section>

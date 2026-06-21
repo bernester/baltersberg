@@ -1,59 +1,61 @@
-<script>
+<script lang="ts">
   import data from "../../data.json";
   import { formatDate } from "$lib/utils";
-  import { headlineClasses, sectionClasses } from "$lib/styles";
+  import { titleClasses, sectionClasses } from "$lib/styles";
   import { Marker } from "$lib/annotate";
 </script>
 
 <section class={`${sectionClasses.wide} space-y-6`}>
-  <h2 class={`${headlineClasses} text-center mb-8`}>
+  <h2 class={[titleClasses, "text-center mb-8"]}>
     Die Freizeit auf einen Blick
   </h2>
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">
-    <dl class="space-y-1">
-      <dt class="font-bold text-base">Dauer:</dt>
-      <dd class="text-lg text-balance">
-        Das Zeltlager dauert <span class="font-bold" use:Marker>10 Tage</span>
+  <dl class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">
+    <div class="space-y-1">
+      <dt class="font-bold text-lg">Dauer:</dt>
+      <dd class="text-xl text-balance">
+        Die Freizeit dauert <span class="font-bold" use:Marker>10 Tage</span>
       </dd>
-    </dl>
-    <dl class="space-y-1">
-      <dt class="font-bold text-base">Anreise:</dt>
-      <dd class="text-lg text-balance">
+    </div>
+    <div class="space-y-1">
+      <dt class="font-bold text-lg">Anreise:</dt>
+      <dd class="text-xl text-balance">
         Am <span class="font-bold" use:Marker
           >{formatDate(data.dates.camp.start)}
-          ab 11 Uhr</span
+          {data.schedule.arrivalTime}</span
         > könnt ihr anreisen.
       </dd>
-    </dl>
-    <dl class="space-y-1">
-      <dt class="font-bold text-base">Abreise:</dt>
-      <dd class="text-lg text-balance">
-        Die Abreise beginnt <span class="font-bold" use:Marker
-          >{formatDate(data.dates.camp.end)} ab 11 Uhr</span
+    </div>
+    <div class="space-y-1">
+      <dt class="font-bold text-lg">Abreise:</dt>
+      <dd class="text-xl text-balance">
+        Die Abreise ist am <span class="font-bold" use:Marker
+          >{formatDate(data.dates.camp.end)} {data.schedule.departureTime}</span
         >
       </dd>
-    </dl>
-    <dl class="space-y-1">
-      <dt class="font-bold text-base">Addresse:</dt>
-      <dd class="text-lg text-balance">
-        Zeltplatz am Buchweiher, Buch 4, 88260 Argenbühl
+    </div>
+    <div class="space-y-1">
+      <dt class="font-bold text-lg">Adresse:</dt>
+      <dd class="text-xl text-balance">
+        {data.venue.name}, {data.venue.street},
+        {data.venue.postalCode}
+        {data.venue.city}
       </dd>
-    </dl>
-    <dl class="space-y-1">
-      <dt class="font-bold text-base">Teilnehmende:</dt>
-      <dd class="text-lg text-balance">
+    </div>
+    <div class="space-y-1">
+      <dt class="font-bold text-lg">Teilnehmende:</dt>
+      <dd class="text-xl text-balance">
         Wir haben Platz für <span class="font-bold" use:Marker
           >32 Kinder und Jugendliche</span
         >
       </dd>
-    </dl>
-    <dl class="space-y-1">
-      <dt class="font-bold text-base">Alterspanne:</dt>
-      <dd class="text-lg text-balance">
-        Das Zeltlager ist besonders <span class="font-bold" use:Marker
+    </div>
+    <div class="space-y-1">
+      <dt class="font-bold text-lg">Alterspanne:</dt>
+      <dd class="text-xl text-balance">
+        Die Freizeit ist besonders <span class="font-bold" use:Marker
           >für 9- bis 14-Jährige</span
         > geeignet.
       </dd>
-    </dl>
-  </div>
+    </div>
+  </dl>
 </section>

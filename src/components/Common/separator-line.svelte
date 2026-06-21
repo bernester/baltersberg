@@ -1,26 +1,31 @@
 <script lang="ts">
-  import { separatorLines, type SvgLine } from "$lib/separator-lines";
+  import { untrack } from "svelte";
 
   type Props = {
-    lines?: SvgLine[];
     class?: string;
   };
 
-  const { lines = separatorLines, class: className = "" }: Props = $props();
+  const { class: className = "" }: Props = $props();
 
-  // Pick a random line when component is created
-  const selectedLine = lines[Math.floor(Math.random() * lines.length)];
+  // 4 hand-drawn separator variants in /static/separators/. Each SVG has its
+  // own viewBox, so the browser computes the width from the intrinsic aspect
+  // ratio while we constrain the height with Tailwind.
+  const lines = [
+    "/separators/line-1.svg",
+    "/separators/line-2.svg",
+    "/separators/line-3.svg",
+    "/separators/line-4.svg",
+  ];
+
+  // Pick once when the component is created (intentionally non-reactive).
+  const selected = untrack(
+    () => lines[Math.floor(Math.random() * lines.length)],
+  );
 </script>
 
-<svg
-  class={`w-auto h-1 aspect-auto ${className} mx-auto my-8`}
-  viewBox={selectedLine.viewBox}
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
+<img
+  src={selected}
+  class={`w-auto h-1 ${className} mx-auto my-8`}
   aria-hidden="true"
-  role="presentation"
->
-  {#each selectedLine.paths as path}
-    <path d={path} fill="currentColor" class="text-black" />
-  {/each}
-</svg>
+  alt=""
+/>

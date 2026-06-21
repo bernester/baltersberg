@@ -1,16 +1,8 @@
 import type { Handle } from '@sveltejs/kit';
-import helmet from 'sveltekit-helmet';
-import { sequence } from '@sveltejs/kit/hooks';
 
-export const helmetHandle = helmet({
-	contentSecurityPolicy: {
-		directives: {
-			'script-src': "'self' 'unsafe-inline'",
-		},
-	},
-});
-
-export const permissionPolicy: Handle = async ({ event, resolve }) => {
+// CSP is configured in svelte.config.js (kit.csp). This hook only sets the
+// response headers that SvelteKit doesn't manage out of the box.
+export const handle: Handle = async ({ event, resolve }) => {
 	const response = await resolve(event);
 	response.headers.set(
 		'Permissions-Policy',
@@ -18,5 +10,3 @@ export const permissionPolicy: Handle = async ({ event, resolve }) => {
 	);
 	return response;
 };
-
-export const handle = sequence(helmetHandle, permissionPolicy);
