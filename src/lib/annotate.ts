@@ -1,7 +1,7 @@
 import { annotate } from "rough-notation";
 import type { Action } from "svelte/action";
 
-type AnnotateColor = "green" | "yellow" | "black" | "pink";
+type AnnotateColor = "green" | "yellow" | "black" | "pink" | "red";
 
 // Reuse rough-notation's own types instead of duplicating them.
 type RoughOptions = Parameters<typeof annotate>[1];
@@ -54,15 +54,19 @@ const transparentColor: Record<AnnotateColor, string> = {
   yellow: "var(--color-yellow-transparent)",
   black: "var(--color-black-transparent)",
   pink: "var(--color-pink-transparent)",
+  red: "var(--color-red-transparent)",
 };
 
-export const Underline: Action<HTMLElement> = (node) =>
+export const Underline: Action<HTMLElement, AnnotateColor | undefined> = (
+  node,
+  color = "black",
+) =>
   createAnnotation(node, {
     type: "underline",
     strokeWidth: 2,
     iterations: 4,
     padding: 0,
-    color: "var(--color-black-transparent)",
+    color: transparentColor[color],
     multiline: true,
   });
 

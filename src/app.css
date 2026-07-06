@@ -23,6 +23,10 @@
   --color-pink-light: oklch(0.75 0.13 360);
 
   --color-pink-transparent: oklch(0.9 0.08 330 / 0.8);
+
+  --color-red: oklch(0.63 0.24 27);
+  --color-red-transparent: oklch(0.63 0.24 27 / 0.8);
+  --color-red-light: oklch(0.63 0.16 27);
 }
 
 @font-face {
