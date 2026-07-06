@@ -26,6 +26,8 @@
       <a href="#mehr" use:scrollTo={"mehr"} class={linkClasses}
         >Mehr erfahren</a
       >
+    {:else}
+      <p class="font-bold">Wir sind leider bereits <span use:Underline={"red"}>ausgebucht.</span></p>
     {/if}
   </div>
 </section>

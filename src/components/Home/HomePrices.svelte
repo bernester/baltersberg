@@ -39,6 +39,8 @@
     </div>
     {#if data.registrationOpen}
       <RegisterButton />
+    {:else}
+    <p class="font-bold">Wir sind leider bereits <span use:Underline={"red"}>ausgebucht.</span></p>
     {/if}
 
     <div class="space-y-2">
