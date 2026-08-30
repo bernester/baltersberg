@@ -68,6 +68,28 @@ src/
 - **Page copy** (home page, manifest, info page, mach-mit): edit the
   `+page.svelte` or the corresponding component in `src/components/`.
 
+## Brand and writing
+
+Before building a new page or writing new copy, read:
+
+- [`docs/brand.md`](docs/brand.md) — the visual system: the four Manifest
+  principles behind it, the type scale, what each colour means, how much
+  annotation is too much, the page-building checklist, and the accessibility
+  floor.
+- [`docs/writing.md`](docs/writing.md) — the copy rules: which Anrede each
+  audience gets (`ihr` for parents, `du` for children, team and donors), how to
+  gender (neutral first, then `*in`), the voice, punctuation and `&nbsp;`
+  mechanics, and the standing names.
+
+Where they and this README disagree, they win.
+
+The brand book also exists as a **living page** at
+[`/brand`](src/routes/brand/+page.svelte) (`npm run dev`, then
+<http://localhost:5173/brand>). It imports the real tokens, class constants
+and annotation actions rather than restating them, so every specimen on it
+changes when the code does. Read the docs for the rules, open the page to see
+them. It is `noindex` and not linked from the site's navigation.
+
 ## Styling conventions
 
 - Layout widths live in `sectionClasses` (`default`, `wide`) in
