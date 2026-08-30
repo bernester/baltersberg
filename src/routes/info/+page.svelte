@@ -29,7 +29,7 @@
           <span use:Marker class="inline-block">Informationen</span> für die Freizeit.
         </h1>
         <p class={leadParagraphClasses}>
-          Hier findest du alle wichtigen Informationen für eine reibungslose An-
+          Hier findet ihr alle wichtigen Informationen für eine reibungslose An-
           und Abreise und eine unvergessliche Freizeit:
         </p>
       </article>
@@ -48,7 +48,7 @@
                 {formatDate(data.dates.camp.start)}
                 {data.schedule.arrivalTime}.</strong
               >
-              Ihr erhaltet vorab ein paar Unterlagen per Post — bitte bringt sie
+              Ihr erhaltet vorab ein paar Unterlagen per Post – bitte bringt sie
               ausgefüllt zur Anreise mit.
             </p>
             <ul class="packlist space-y-2 text-md/relaxed md:text-lg/relaxed">
@@ -75,8 +75,8 @@
             </p>
             <p class={paragraphClasses}>
               Kinder mit <strong>Läusen</strong> müssen behandelt werden. Wir sind
-              verpflichtet, alle Teilnehmer:innen zu kontrollieren. Schaut deshalb
-              schon vor der Anreise nach Läusen und Nissen — und fragt im Zweifelsfall
+              verpflichtet, alle Teilnehmenden zu kontrollieren. Schaut deshalb
+              schon vor der Anreise nach Läusen und Nissen – und fragt im Zweifelsfall
               den Hausarzt.
             </p>
           </article>
@@ -179,7 +179,7 @@
           <div class="p-4" use:Marker={"pink"}>
             <p class={paragraphClasses}>
               <strong use:Underline>Tipp:</strong>
-              Bitte alles mit <strong>Namensschildern</strong> versehen — dann
+              Bitte alles mit <strong>Namensschildern</strong> versehen – dann
               findest du verlorene oder verlegte Dinge leichter.
               <strong use:Underline
                 >Fundsachen können nicht zurückgeschickt werden.</strong
@@ -267,7 +267,7 @@
         </article>
         <article class="space-y-4">
           <h3 class={headlineClasses}>
-            <span use:Underline>Für's Essen</span>
+            <span use:Underline>Fürs Essen</span>
           </h3>
           <ul class="packlist space-y-2 text-md/relaxed md:text-lg/relaxed">
             <Check><strong>1 Trinkflasche</strong></Check>
@@ -317,7 +317,7 @@
         <div use:Box>
           <div class="p-4" use:Marker={"pink"}>
             <p class={`${paragraphClasses} text-center text-balance`}>
-              Solltest du manche Dinge — wie einen Schlafsack — nicht besitzen
+              Solltest du manche Dinge – wie einen Schlafsack – nicht besitzen
               oder besorgen können, sag uns bitte rechtzeitig Bescheid. Wir
               helfen dir gerne.
             </p>

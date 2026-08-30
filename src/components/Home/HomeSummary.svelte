@@ -50,7 +50,7 @@
       </dd>
     </div>
     <div class="space-y-1">
-      <dt class="font-bold text-lg">Alterspanne:</dt>
+      <dt class="font-bold text-lg">Altersspanne:</dt>
       <dd class="text-xl text-balance">
         Die Freizeit ist besonders <span class="font-bold" use:Marker
           >für 9- bis 14-Jährige</span

@@ -132,8 +132,8 @@
   <h3 class={h3Classes}>So schaffen wir Geborgenheit:</h3>
   <ul>
     <li class={listItemClasses}>
-      <strong use:Underline>Bewusste und gesunde Ernährung:</strong> Sonne, frische
-      Luft machen hungrig und leckeres Essen macht glücklich. Unser Küchenteam zaubert
+      <strong use:Underline>Bewusste und gesunde Ernährung:</strong> Sonne und frische
+      Luft machen hungrig, leckeres Essen macht glücklich. Unser Küchenteam zaubert
       jeden Tag 4 leckere vegetarische Mahlzeiten aus überwiegend regionalen Zutaten.
     </li>
     <li class={listItemClasses}>
