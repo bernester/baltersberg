@@ -4,6 +4,19 @@
 
   const QuestionClasses = "text-lg md:text-xl font-bold mb-4";
   const AnswerClasses = "text-md/relaxed md:text-lg/relaxed mb-8";
+
+  const MS_PER_DAY = 24 * 60 * 60 * 1000;
+  // Das Kick-Off-Wochenende steht noch nicht in data.json — sein Datum wird
+  // erst abgestimmt, seine Länge steht aber fest.
+  const VBT_DAYS = 2;
+  // Der Abreisetag am Ende des Abbaus zählt nicht als voller Tag, deshalb
+  // ohne +1.
+  const teamDays =
+    Math.round(
+      (new Date(data.dates.abbau.end).getTime() -
+        new Date(data.dates.aufbau.start).getTime()) /
+        MS_PER_DAY,
+    ) + VBT_DAYS;
 </script>
 
 <section id="faq" class={sectionClasses.default}>
@@ -30,9 +43,10 @@
   <article>
     <h3 class={QuestionClasses}>Wie viel Zeit muss man investieren?</h3>
     <p class={AnswerClasses}>
-      Die ganze Freizeit von Kick-Off bis Nachtreffen sind 16 Tage. Natürlich
-      ist es gar nicht leicht sich so viel Zeit frei zu halten. Wir freuen uns
-      aber um jegliche Unterstützung, egal wie lange.
+      Vom Kick-Off-Wochenende bis zum Abbau sind es {teamDays} Tage. Dazu kommt
+      noch das Nachtreffen. Natürlich ist es gar nicht leicht sich so viel Zeit
+      frei zu halten. Wir freuen uns aber um jegliche Unterstützung, egal wie
+      lange.
     </p>
   </article>
   <p class="text-xl font-bold mb-4">

@@ -31,6 +31,59 @@
   --color-red-light: oklch(0.63 0.16 27);
 }
 
+/* HDR-Schmuckfarben — progressive enhancement, heute noch wirkungslos.
+   Kein Browser liefert color(rec2100-pq …) aus (geprüft 09/2026: Chrome 152
+   parst die Deklaration nicht, Safari 27 ergänzt nur die linearen Räume).
+   @supports hält den Block deshalb inaktiv, bis einer es tut — dann greift er
+   von allein. Das doppelte Gate ist Absicht: auf SDR-Displays bleibt die
+   Palette exakt die oklch-Version darüber.
+
+   Die Werte sind aus genau diesen oklch-Tokens gerechnet, nicht geschätzt:
+   oklch → OKLab → XYZ D65 → lineares Rec.2020 → 203 cd/m² Diffusweiß
+   (BT.2408) × 1,25 → PQ-Inverse-EOTF (ST 2084). Die Kanalverhältnisse bleiben
+   unangetastet, der Headroom hebt nur die Helligkeit — deshalb ist hier nichts
+   auf 1.0 geclippt und Gelb und Grün behalten ihren Farbton.
+
+   Spitzen: yellow 280 cd/m² (1,38× Weiß), green 339 (1,67×), pink 203 (1,00×),
+   red 153 (0,75×). Dass Rot unter Weiß bleibt, ist gewollt — es markiert
+   ausgebucht und Fehler und soll nicht strahlen.
+
+   Die -transparent-Varianten sind mit, weil sonst ausgerechnet die Signatur
+   der Seite dunkel bliebe: annotate.ts zieht für jeden Marker, Underline,
+   Circle und Box ein -transparent-Token, nie das Basis-Token. Gelb, Grün und
+   Rot sind dort nur ihre Basis bei 0.8 Alpha und bekommen deshalb dieselben
+   PQ-Koordinaten; Pink ist eine eigene, blassere Farbe und eigens gerechnet.
+   Über weißem Grund komponiert landen sie bei 264, 312, 225 und 163 cd/m² —
+   das Alpha dämpft den Headroom also von sich aus.
+
+   Schwarz bleibt ganz draußen, Basis wie -transparent: ein Marker in Schwarz
+   soll dunkel sein. Die -light-Varianten auch — die stehen als Schrift auf
+   schwarzen Buttons (siehe text-green-light), und leuchtende Schrift ist genau
+   der Blendfall, den man nicht will.
+
+   Bleibt ein Rest, der sich erst an echter Hardware entscheiden lässt: Gelb
+   und Grün tragen bei 0.8 Alpha rund 300 cd/m² hinter schwarzem Fließtext.
+   Der Kontrast steigt dadurch, die Blendung aber auch. Wenn das auf einem
+   HDR-Display unangenehm wird, ist der Hebel der Headroom-Faktor 1,25 in der
+   Rechnung oben, nicht das Alpha. */
+@supports (color: color(rec2100-pq 0.5 0.5 0.5)) {
+  @media (dynamic-range: high) {
+    :root {
+      --color-yellow: color(rec2100-pq 0.6070 0.6147 0.3942);
+      --color-yellow-transparent: color(rec2100-pq 0.6070 0.6147 0.3942 / 0.8);
+
+      --color-green: color(rec2100-pq 0.5356 0.6349 0.5603);
+      --color-green-transparent: color(rec2100-pq 0.5356 0.6349 0.5603 / 0.8);
+
+      --color-pink: color(rec2100-pq 0.5806 0.4479 0.5056);
+      --color-pink-transparent: color(rec2100-pq 0.5877 0.5559 0.5938 / 0.8);
+
+      --color-red: color(rec2100-pq 0.5512 0.3619 0.2974);
+      --color-red-transparent: color(rec2100-pq 0.5512 0.3619 0.2974 / 0.8);
+    }
+  }
+}
+
 @font-face {
   font-family: "Bolle";
   src: url("/fonts/MFHeavyHandedLargeRegular/font.woff2") format("woff2");
