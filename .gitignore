@@ -5,3 +5,5 @@ node_modules
 /.svelte
 /.svelte-kit
 /.vscode
+/.claude/settings.local.json
+/.claude/worktrees
