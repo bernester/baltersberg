@@ -45,7 +45,7 @@ src/
 │   └── MachMit/             Sections used on /mach-mit
 ├── content/                 Markdown sources for the legal pages
 │                            (impressum, datenschutz, barrierefreiheit,
-│                            satzung, schutzkonzept, vereinssatzung)
+│                            satzung, schutzkonzept)
 ├── lib/
 │   ├── annotate.ts          Svelte 5 actions wrapping rough-notation
 │   ├── markdown.ts          Loads + renders src/content/*.md
