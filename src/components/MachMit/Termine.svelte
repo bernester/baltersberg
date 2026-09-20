@@ -7,11 +7,13 @@
   const TermineTitleClasses =
     "text-2xl/none md:text-3xl/none font-bolle uppercase mb-2";
   const TermineSummaryClasses = "text-md md:text-lg";
+
+  const campYear = new Date(data.dates.camp.start).getFullYear();
 </script>
 
 <section class={sectionClasses.wide}>
   <h2 class={[titleClasses, "text-center mb-12 md:mb-20"]}>
-    Termine <span use:Circle={"green"}>2026</span>
+    Termine <span use:Circle={"green"}>{campYear}</span>
   </h2>
 
   <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -20,8 +22,12 @@
         <span use:Underline class="inline-block">Kick-Off</span> Wochenende
       </h3>
       <p class={TermineSummaryClasses}>
-        {formatDateTime(data.dates.vbt.start)} bis
-        {formatDateTime(data.dates.vbt.end)}
+        {#if data.dates.vbt.start && data.dates.vbt.end}
+          {formatDateTime(data.dates.vbt.start)} bis
+          {formatDateTime(data.dates.vbt.end)}
+        {:else}
+          Wird noch abgestimmt
+        {/if}
       </p>
     </article>
     <article>
