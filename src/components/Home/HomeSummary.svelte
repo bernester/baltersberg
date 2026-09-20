@@ -13,7 +13,7 @@
     <div class="space-y-1">
       <dt class="font-bold text-lg">Dauer:</dt>
       <dd class="text-xl text-balance">
-        Die Freizeit dauert <span class="font-bold" use:Marker>10 Tage</span>
+        Die Freizeit dauert <span class="font-bold" use:Marker>9 Tage</span>
       </dd>
     </div>
     <div class="space-y-1">

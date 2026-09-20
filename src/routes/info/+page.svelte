@@ -112,7 +112,7 @@
               <span use:Marker class="inline-block">Abreise</span>
             </h2>
             <p class={paragraphClasses}>
-              Nach zehn unvergesslichen Tagen müssen wir uns auch schon wieder
+              Nach neun unvergesslichen Tagen müssen wir uns auch schon wieder
               verabschieden. Die Abreise ist
               <strong use:Underline
                 >am

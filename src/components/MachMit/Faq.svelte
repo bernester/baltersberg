@@ -21,7 +21,7 @@
     <h3 class={QuestionClasses}>Bekommt man etwas dafür?</h3>
     <p class={AnswerClasses}>
       Bei der Freizeitbande wird man vor allem reich an Erfahrungen und
-      wundervollen Erinnerungen. Daneben bekommt man für die 10 Tage der
+      wundervollen Erinnerungen. Daneben bekommt man für die 9 Tage der
       Freizeit eine Aufwandsentschädigung von 14 €/Tag. Kosten für die An- und
       Abreise werden ebenfalls im Rahmen unserer Möglichkeiten erstattet.
       Verpflegung und Unterkunft ist natürlich kostenlos.
