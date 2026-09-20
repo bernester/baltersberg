@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-  <title>Vereinssatzung – Freizeit für Alle</title>
+  <title>Satzung der Freizeitbande e.V. – Freizeit für Alle</title>
 </svelte:head>
 
 <div class={proseWrapperClasses}>
