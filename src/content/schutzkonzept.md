@@ -9,3 +9,5 @@ Wir wollen, dass Kinder und Jugendliche bei uns so gut es geht vor sexualisierte
 Und falls es doch zu Grenzüberschreitungen kommt, dann sind wir gut vorbereitet und wissen, wie wir damit umgehen. Wir haben ein Ablaufschema, geschulte Ansprechpersonen im Team und wir haben Fachpersonen außerhalb, die uns beraten können.
 
 Unser Schutzkonzept befindet sich in stetiger Überarbeitung und ist bald hier zu finden.
+
+Ihr habt eine Beschwerde oder ein Anliegen? Schreibt uns an [kinderschutz@freizeitban.de](mailto:kinderschutz@freizeitban.de).
